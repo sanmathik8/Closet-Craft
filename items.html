@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts (Poppins for better style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #5e3370;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .product-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover img {
+            transform: scale(1.1); /* Image zoom effect */
+        }
+
+        .product-box .btn-view {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .product-box:hover .btn-view {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        /* Glacier effect */
+        .product-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8));
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-box:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 1024px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        <div class="product-container">
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://rmkv.com/cdn/shop/files/1_cfec847d-8565-4074-8ce5-7ec302a26287_1370x.webp?v=1737090081" alt="Kurti Set 1">
+                    <a href="kurta-sets.html" class="btn-view">View Kurti Set</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/38/49/3849abcef6c50ff9923e10da15c2c163e13bd34b.jpg?imwidth=384" alt="Coat">
+                    <a href="coats.html" class="btn-view">View Coat</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20231004/kRna/651c78b1afa4cf41f51fa184/-473Wx593H-466660076- -MODEL.jpg" alt="Crop Top">
+                    <a href="croptop.html" class="btn-view">View Crop Top</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875201984-18.jpg" alt="Jeans 1">
+                    <a href="jeans.html" class="btn-view">View Jeans</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://rmkv.com/cdn/shop/files/Rmkv_13Dec0423_1370x.webp?v=1736575598" alt="Embroidered Kurta">
+                    <a href="kurtis.html" class="btn-view">View Kurta</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-offwhite-zariwork-velvet-designer-readymadelehenga-gcbr0039338_off_white_1_3_large.jpg?v=1731563730" alt="Lehenga">
+                    <a href="lehengas.html" class="btn-view">View Lehenga</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwf09c95f6/images/hires/SS22/GD-FW22GSEST17E-BLUE-ViscosePrintScarf2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 49">
+                    <a href="scarves.html" class="btn-view">View Scarf</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20231103/pFNj/6545179dafa4cf41f572dacb/-473Wx593H-443032633-offwhite-MODEL.jpg" alt="Skirt 38">
+                    <a href="skirts.html" class="btn-view">View Skirt</a>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-skyblue-threadwork-semicrepe-designer-salwar-suit-ssus0038314_sky_blue_1_2_large.jpg?v=1724736894" alt="Skyblue Threadwork Semicrepe Salwar Suit">
+                    <a href="suits-dress-material.html" class="btn-view">View Salwar Suit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

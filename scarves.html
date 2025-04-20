@@ -1,0 +1,678 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehenga Collection</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts (Poppins for better style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #5e3370;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .product-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-box h3 {
+            font-size: 24px;
+            color: #5e3370;
+            margin-bottom: 15px;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-box .price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #5e3370;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #8e44ad;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Product Gallery</h1>
+        <div class="product-grid">
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwf6d17923/images/hires/SS22/GD-NO-F23GSEST16BLU-BLUE%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 1">
+                    <h3>Blue Printed Scarf</h3>
+                    <p>Stylish blue printed scarf, perfect for adding a touch of elegance to any outfit.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Blue Printed Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw9bc36c2f/images/hires/SS22/GD-F23GSEST16MRO-MAROON%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 2">
+                    <h3>Maroon Embroidered Scarf</h3>
+                    <p>Beautiful maroon embroidered scarf, adding a rich and sophisticated touch.</p>
+                    <div class="price">₹1,299</div>
+                    <button class="add-to-cart-btn" data-item="Maroon Embroidered Scarf - ₹1,299">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwdb20db76/images/hires/SS22/GD-FW22GBXST12-MULTI-ViscosePrintScarf2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 3">
+                    <h3>Multi-color Viscose Scarf</h3>
+                    <p>Vibrant multi-color viscose scarf, perfect for adding a pop of color to your look.</p>
+                    <div class="price">₹799</div>
+                    <button class="add-to-cart-btn" data-item="Multi-color Viscose Scarf - ₹799">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwf6d17923/images/hires/SS22/GD-NO-F23GSEST16BLU-BLUE%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 1">
+                    <h3>Blue Printed Scarf</h3>
+                    <p>Stylish blue printed scarf, perfect for adding a touch of elegance to any outfit.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Blue Printed Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw9bc36c2f/images/hires/SS22/GD-F23GSEST16MRO-MAROON%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 2">
+                    <h3>Maroon Embroidered Scarf</h3>
+                    <p>Beautiful maroon embroidered scarf, adding a rich and sophisticated touch.</p>
+                    <div class="price">₹1,299</div>
+                    <button class="add-to-cart-btn" data-item="Maroon Embroidered Scarf - ₹1,299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwdb20db76/images/hires/SS22/GD-FW22GBXST12-MULTI-ViscosePrintScarf2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 3">
+                    <h3>Multi-color Viscose Scarf</h3>
+                    <p>Vibrant multi-color viscose scarf, perfect for adding a pop of color to your look.</p>
+                    <div class="price">₹799</div>
+                    <button class="add-to-cart-btn" data-item="Multi-color Viscose Scarf - ₹799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw2c3e4cb0/images/hires/SS22/ss20gstst35mstd.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 4">
+                    <h3>Mustard Printed Scarf</h3>
+                    <p>Elegant mustard printed scarf, perfect for adding a touch of sophistication to your ensemble.</p>
+                    <div class="price">₹899</div>
+                    <button class="add-to-cart-btn" data-item="Mustard Printed Scarf - ₹899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw864cc94b/images/hires/SS22/GD-FW22GKBST01WHIT-WhiteAcrylicPrintScarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 5">
+                    <h3>White Acrylic Print Scarf</h3>
+                    <p>Stylish white acrylic print scarf, adding a touch of modern flair to your look.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="White Acrylic Print Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw8a219284/images/hires/SS22/and-fw21gsist09mron_1_.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 6">
+                    <h3>Maroon Printed Scarf</h3>
+                    <p>Classic maroon printed scarf, perfect for adding a touch of timeless elegance to any outfit.</p>
+                    <div class="price">₹949</div>
+                    <button class="add-to-cart-btn" data-item="Maroon Printed Scarf - ₹949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw88dd2ac1/images/hires/SS22/GD-FW22GKBST43TEAL%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 7">
+                    <h3>Teal Printed Scarf</h3>
+                    <p>Beautiful teal printed scarf, adding a refreshing and vibrant touch to your look.</p>
+                    <div class="price">₹1,149</div>
+                    <button class="add-to-cart-btn" data-item="Teal Printed Scarf - ₹1,149">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw440af3c8/images/hires/SS22/F24GST12_PINK%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 8">
+                    <h3>Pink Printed Scarf</h3>
+                    <p>Lovely pink printed scarf, perfect for adding a touch of femininity to any outfit.</p>
+                    <div class="price">₹849</div>
+                    <button class="add-to-cart-btn" data-item="Pink Printed Scarf - ₹849">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwd46eecbb/images/hires/S23/GD-SS23GARST04TEAL-Teal-Polyster-Scarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 9">
+                    <h3>Teal Polyester Scarf</h3>
+                    <p>Elegant teal polyester scarf, adding a sophisticated and stylish touch to your look.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Teal Polyester Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+         
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw92d87d90/images/hires/S23/GD-SS23GBOST18YELO-YELLOW-(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 10">
+                    <h3>Yellow Printed Scarf</h3>
+                    <p>Cheerful yellow printed scarf, perfect for adding a sunny touch to your outfit.</p>
+                    <div class="price">₹899</div>
+                    <button class="add-to-cart-btn" data-item="Yellow Printed Scarf - ₹899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw323583ec/images/hires/S23/GD-SS23GBOST22GREN%20(2).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 11">
+                    <h3>Green Printed Scarf</h3>
+                    <p>Stylish green printed scarf, perfect for adding a fresh and vibrant touch to your look.</p>
+                    <div class="price">₹949</div>
+                    <button class="add-to-cart-btn" data-item="Green Printed Scarf - ₹949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw6447a643/images/hires/SS22/GD-SCARVE-FW22GSTST04BLAK-BLACK%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 12">
+                    <h3>Black Printed Scarf</h3>
+                    <p>Classic black printed scarf, perfect for adding a touch of timeless elegance to any outfit.</p>
+                    <div class="price">₹1,049</div>
+                    <button class="add-to-cart-btn" data-item="Black Printed Scarf - ₹1,049">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw91b5b72b/images/hires/SS22/GD-FW22GBOST20NAVY%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 13">
+                    <h3>Navy Printed Scarf</h3>
+                    <p>Sophisticated navy printed scarf, perfect for adding a touch of understated elegance to your look.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Navy Printed Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw8d141e22/images/hires/SS22/GD-F23GSEST03GRN-GREEN%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 14">
+                    <h3>Green Embroidered Scarf</h3>
+                    <p>Beautiful green embroidered scarf, adding a rich and sophisticated touch to your ensemble.</p>
+                    <div class="price">₹1,299</div>
+                    <button class="add-to-cart-btn" data-item="Green Embroidered Scarf - ₹1,299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwb5cc17a1/images/hires/S23/GD-SS23GSEST36RED-Red-Chiffon-Scarf%20-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 15">
+                    <h3>Red Chiffon Scarf</h3>
+                    <p>Elegant red chiffon scarf, perfect for adding a touch of glamour to any outfit.</p>
+                    <div class="price">₹1,199</div>
+                    <button class="add-to-cart-btn" data-item="Red Chiffon Scarf - ₹1,199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw71e7aad1/images/hires/SS22/GD-FW22GSEST48WHIT%20(2).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 16">
+                    <h3>White Embroidered Scarf</h3>
+                    <p>Beautiful white embroidered scarf, adding a touch of timeless elegance to your look.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="White Embroidered Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw29d18355/images/hires/SS22/GD-FW22GBXST07BLUE-BlueAcrylicPrintScarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 17">
+                    <h3>Blue Acrylic Print Scarf</h3>
+                    <p>Stylish blue acrylic print scarf, perfect for adding a touch of modern flair to your outfit.</p>
+                    <div class="price">₹949</div>
+                    <button class="add-to-cart-btn" data-item="Blue Acrylic Print Scarf - ₹949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw0eb35869/images/hires/SS22/GD-F23GSEST03BLK-BLACK-(1)-copy.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 18">
+                    <h3>Black Embroidered Scarf</h3>
+                    <p>Beautiful black embroidered scarf, adding a rich and sophisticated touch to your ensemble.</p>
+                    <div class="price">₹1,249</div>
+                    <button class="add-to-cart-btn" data-item="Black Embroidered Scarf - ₹1,249">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw682fe1f0/images/hires/SS22/fw21gsest06blue_2__1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 19">
+                    <h3>Blue Printed Scarf</h3>
+                    <p>Stylish blue printed scarf, perfect for adding a touch of elegance to any outfit.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Blue Printed Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw9cd5d621/images/hires/S23/GD-SS23GBOST17PINK%20(2).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 20">
+                    <h3>Pink Printed Scarf</h3>
+                    <p>Lovely pink printed scarf, perfect for adding a touch of femininity to any outfit.</p>
+                    <div class="price">₹899</div>
+                    <button class="add-to-cart-btn" data-item="Pink Printed Scarf - ₹899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwd4b78aaa/images/hires/SS22/GD-SS22GBDST19BLAK.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 21">
+                    <h3>Black Printed Scarf</h3>
+                    <p>Classic black printed scarf, perfect for adding a touch of timeless elegance to any outfit.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="Black Printed Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwc883643c/images/hires/SS22/and-fw21gsist08blue_1_.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 22">
+                    <h3>Blue Printed Scarf</h3>
+                    <p>Stylish blue printed scarf, perfect for adding a touch of elegance to any outfit.</p>
+                    <div class="price">₹949</div>
+                    <button class="add-to-cart-btn" data-item="Blue Printed Scarf - ₹949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw762e8973/images/hires/SS22/GD-FW22GBXST10MRON%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 23">
+                    <h3>Maroon Printed Scarf</h3>
+                    <p>Beautiful maroon printed scarf, adding a rich and sophisticated touch.</p>
+                    <div class="price">₹1,249</div>
+                    <button class="add-to-cart-btn" data-item="Maroon Printed Scarf - ₹1,249">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw86e4825f/images/hires/SS22/gd-pink-scarve-ss22gbost14pink_2_.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 24">
+                    <h3>Pink Printed Scarf</h3>
+                    <p>Lovely pink printed scarf, perfect for adding a touch of femininity to any outfit.</p>
+                    <div class="price">₹849</div>
+                    <button class="add-to-cart-btn" data-item="Pink Printed Scarf - ₹849">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw3763b5e6/images/hires/S23/GD-SS23GBIST03TEAL-Teal-Viscose-Scarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 25">
+                    <h3>Teal Viscose Scarf</h3>
+                    <p>Elegant teal viscose scarf, adding a sophisticated and stylish touch to your look.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Teal Viscose Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwbf3ce2d6/images/hires/SS22/GD-FW22GSEST51MLTI.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 26">
+                    <h3>Multi-color Printed Scarf</h3>
+                    <p>Vibrant multi-color printed scarf, perfect for adding a pop of color to your look.</p>
+                    <div class="price">₹799</div>
+                    <button class="add-to-cart-btn" data-item="Multi-color Printed Scarf - ₹799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw5c955555/images/hires/S23/GD-SS23GARST04WHIT-White-Polyster-Scarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 27">
+                    <h3>White Polyester Scarf</h3>
+                    <p>Stylish white polyester scarf, perfect for adding a touch of modern flair to your look.</p>
+                    <div class="price">₹1,049</div>
+                    <button class="add-to-cart-btn" data-item="White Polyester Scarf - ₹1,049">Add to Cart</button>
+                </div>
+            </div>
+          
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw1901871d/images/hires/S23/GD-SS23GBOST23PECH-PEACH-(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 28">
+                    <h3>Peach Printed Scarf</h3>
+                    <p>Delicate peach printed scarf, perfect for adding a soft and subtle touch to your outfit.</p>
+                    <div class="price">₹899</div>
+                    <button class="add-to-cart-btn" data-item="Peach Printed Scarf - ₹899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw5a9dfba5/images/hires/SS22/and-fw21gsest06blak_1_.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 29">
+                    <h3>Black Printed Scarf</h3>
+                    <p>Classic black printed scarf, perfect for adding a touch of timeless elegance to any outfit.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="Black Printed Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwb85af9e0/images/hires/SS22/GD-SCARVE-FW22GSTST03BLUE-BLUE%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 30">
+                    <h3>Blue Printed Scarf</h3>
+                    <p>Stylish blue printed scarf, perfect for adding a touch of elegance to any outfit.</p>
+                    <div class="price">₹949</div>
+                    <button class="add-to-cart-btn" data-item="Blue Printed Scarf - ₹949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw179c1132/images/hires/SS22/GD-FW22GMOST30MRON%20(3).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 31">
+                    <h3>Maroon Printed Scarf</h3>
+                    <p>Beautiful maroon printed scarf, adding a rich and sophisticated touch.</p>
+                    <div class="price">₹1,249</div>
+                    <button class="add-to-cart-btn" data-item="Maroon Printed Scarf - ₹1,249">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw4419aac8/images/hires/SS22/GD-FW22GSTST05-MAROON-AcrylicSolidScarf2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 32">
+                    <h3>Maroon Acrylic Scarf</h3>
+                    <p>Cozy maroon acrylic scarf, perfect for keeping you warm and stylish during the colder months.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="Maroon Acrylic Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw660609e4/images/hires/S23/GD-SS23GSEST31BLUE-Blue-Viscose-Scarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 33">
+                    <h3>Blue Viscose Scarf</h3>
+                    <p>Elegant blue viscose scarf, adding a sophisticated and stylish touch to your look.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Blue Viscose Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwc6abc67b/images/hires/S23/GD-SS23GSEST07PINK-2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 34">
+                    <h3>Pink Printed Scarf</h3>
+                    <p>Lovely pink printed scarf, perfect for adding a touch of femininity to any outfit.</p>
+                    <div class="price">₹849</div>
+                    <button class="add-to-cart-btn" data-item="Pink Printed Scarf - ₹849">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw3acb7d0b/images/hires/S23/GD-SS23GBDST16TEAL-Teal-Polyster-Scarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 35">
+                    <h3>Teal Polyester Scarf</h3>
+                    <p>Stylish teal polyester scarf, perfect for adding a touch of modern flair to your look.</p>
+                    <div class="price">₹1,049</div>
+                    <button class="add-to-cart-btn" data-item="Teal Polyester Scarf - ₹1,049">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwd9da773d/images/hires/GD-SS23GBOST19OWHT-OFF-WHITE.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 36">
+                    <h3>Off-White Printed Scarf</h3>
+                    <p>Elegant off-white printed scarf, perfect for adding a touch of sophistication to your ensemble.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Off-White Printed Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwe3d1f28d/images/hires/S23/GD-SS23GBOST21OWHT-OFF-WHITE-(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 37">
+                    <h3>Off-White Printed Scarf</h3>
+                    <p>Elegant off-white printed scarf, perfect for adding a touch of sophistication to your ensemble.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Off-White Printed Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwc04c67c8/images/hires/S23/GD-SS23GRIST05BLUE-Blue-Viscose-Scarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 38">
+                    <h3>Blue Viscose Scarf</h3>
+                    <p>Elegant blue viscose scarf, adding a sophisticated and stylish touch to your look.</p>
+                    <div class="price">₹949</div>
+                    <button class="add-to-cart-btn" data-item="Blue Viscose Scarf - ₹949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwf8f35704/images/hires/SS22/GD-FW22GBOST19PINK-PinkChanderiPrintScarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 39">
+                    <h3>Pink Chanderi Print Scarf</h3>
+                    <p>Beautiful pink chanderi print scarf, adding a touch of traditional elegance to your outfit.</p>
+                    <div class="price">₹1,199</div>
+                    <button class="add-to-cart-btn" data-item="Pink Chanderi Print Scarf - ₹1,199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw74a69946/images/hires/SS22/GD-FW22GBIST15PNK-PinkPolysterPrintScarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 40">
+                    <h3>Pink Polyester Print Scarf</h3>
+                    <p>Stylish pink polyester print scarf, perfect for adding a touch of modern flair to your look.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Pink Polyester Print Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwa6c49cc0/images/hires/SS22/GD-FW22GMEST29PEC%20(3).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 41">
+                    <h3>Peach Printed Scarf</h3>
+                    <p>Delicate peach printed scarf, perfect for adding a soft and subtle touch to your outfit.</p>
+                    <div class="price">₹899</div>
+                    <button class="add-to-cart-btn" data-item="Peach Printed Scarf - ₹899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwe6c20baf/images/hires/SS22/GD-SS22GBOST15GREN-GreenScarf-2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 42">
+                    <h3>Green Scarf</h3>
+                    <p>Stylish green scarf, perfect for adding a fresh and vibrant touch to your look.</p>
+                    <div class="price">₹949</div>
+                    <button class="add-to-cart-btn" data-item="Green Scarf - ₹949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw95815df7/images/hires/S23/GD-SS23GSEST08NAVY-Navy-Viscose-Scarf-1.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 43">
+                    <h3>Navy Viscose Scarf</h3>
+                    <p>Sophisticated navy viscose scarf, perfect for adding a touch of understated elegance to your look.</p>
+                    <div class="price">₹1,049</div>
+                    <button class="add-to-cart-btn" data-item="Navy Viscose Scarf - ₹1,049">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw3279ee4d/images/hires/SS19/GD-SS23GRIST27BLACK-(2).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 44">
+                    <h3>Black Printed Scarf</h3>
+                    <p>Classic black printed scarf, perfect for adding a touch of timeless elegance to any outfit.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="Black Printed Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw8464f3bf/images/hires/SS22/GD-FW22GSTST08BLAK.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 45">
+                    <h3>Black Printed Scarf</h3>
+                    <p>Classic black printed scarf, perfect for adding a touch of timeless elegance to any outfit.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="Black Printed Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+          
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw4203bfde/images/hires/SS22/GD-F23GSEST08BLK-BLACK%20(1).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 46">
+                    <h3>Black Embroidered Scarf</h3>
+                    <p>Beautiful black embroidered scarf, adding a rich and sophisticated touch.</p>
+                    <div class="price">₹1,299</div>
+                    <button class="add-to-cart-btn" data-item="Black Embroidered Scarf - ₹1,299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw6affba6b/images/hires/SS22/GD-FW22GSEST27OWHT%20(3).jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 47">
+                    <h3>Off-White Printed Scarf</h3>
+                    <p>Elegant off-white printed scarf, perfect for adding a touch of sophistication to your ensemble.</p>
+                    <div class="price">₹1,049</div>
+                    <button class="add-to-cart-btn" data-item="Off-White Printed Scarf - ₹1,049">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw4030042b/images/hires/S23/GD-SS23GSEST34MLTI-Multi-Viscose-Scarf-2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 48">
+                    <h3>Multi-color Viscose Scarf</h3>
+                    <p>Vibrant multi-color viscose scarf, perfect for adding a pop of color to your look.</p>
+                    <div class="price">₹899</div>
+                    <button class="add-to-cart-btn" data-item="Multi-color Viscose Scarf - ₹899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dwf09c95f6/images/hires/SS22/GD-FW22GSEST17E-BLUE-ViscosePrintScarf2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 49">
+                    <h3>Blue Viscose Print Scarf</h3>
+                    <p>Stylish blue viscose print scarf, perfect for adding a touch of elegance to any outfit.</p>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Blue Viscose Print Scarf - ₹999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://www.globaldesi.in/dw/image/v2/BGCX_PRD/on/demandware.static/-/Sites-masterCatalog_GD/default/dw37850c04/images/hires/SS22/GD-FW22GSEST02-GREEN-AcrylicPrintScarf2.jpg?sw=400&sh=600&sm=fit&strip=false" alt="Scarf 50">
+                    <h3>Green Acrylic Print Scarf</h3>
+                    <p>Stylish green acrylic print scarf, perfect for adding a touch of modern flair to your look.</p>
+                    <div class="price">₹1,099</div>
+                    <button class="add-to-cart-btn" data-item="Green Acrylic Print Scarf - ₹1,099">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+                document.querySelectorAll(".add-to-cart-btn").forEach((button, index) => {
+                    button.addEventListener("click", function () {
+                        let productBox = button.closest(".product-box");
+                        let productName = productBox.querySelector("h3").textContent;
+                        let productPrice = productBox.querySelector(".price").textContent;
+                        let productImage = productBox.querySelector("img").src;
+        
+                        let product = { name: productName, price: productPrice, image: productImage };
+                        cart.push(product);
+                        localStorage.setItem("cart", JSON.stringify(cart));
+        
+                        // Redirect to cart page
+                        window.location.href = "cart.html";
+                    });
+                });
+            });
+        </script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closet Craft - Perfect Fashion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      z-index: 2; /* Ensure it's above the bubbles */
+    }
+
+    .navbar a {
+      color: #333;
+      font-weight: 500;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 1.125rem; /* 18px */
+      transition: 0.3s ease-in-out;
+    }
+
+    .navbar a:hover {
+      color: #d63384;
+      text-decoration: underline;
+    }
+
+    /* Animated 3D Background */
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .bubble {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .bubble:nth-child(1) { top: 10%; left: 10%; width: 5rem; height: 5rem; animation-delay: 0s; }
+    .bubble:nth-child(2) { top: 20%; left: 50%; width: 3rem; height: 3rem; animation-delay: 1s; }
+    .bubble:nth-child(3) { top: 60%; left: 80%; width: 4.5rem; height: 4.5rem; animation-delay: 2s; }
+    .bubble:nth-child(4) { top: 80%; left: 30%; width: 6rem; height: 6rem; animation-delay: 3s; }
+    .bubble:nth-child(5) { top: 90%; left: 70%; width: 3.5rem; height: 3.5rem; animation-delay: 4s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-12rem); opacity: 1; }
+      100% { transform: translateY(-24rem); opacity: 0.2; }
+    }
+
+    /* Content Box */
+    .content {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 2rem;
+      margin-top: 10rem;
+      margin-bottom: auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+      max-width: 800px;
+      z-index: 1;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .content:hover{
+      transform: translateY(-5px);
+    }
+
+    .content .animated-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      animation: fadeIn 3s forwards;
+    }
+
+    .content p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* 3D Logo */
+    .logo {
+      font-size: 3rem;
+      font-family: 'Dancing Script', cursive;
+      color: #333;
+      margin-bottom: 1.25rem;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      z-index: 2;
+    }
+
+    /* Call to Action */
+    .cta button {
+      background: white;
+      border: none;
+      padding: 1rem 1.875rem;
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: #d63384;
+      border-radius: 1.875rem;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .cta button:hover {
+      background: #d63384;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .auth-links {
+      margin-top: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    .auth-links a {
+      margin: 0 0.625rem;
+      color: #333;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .auth-links a:hover {
+      text-decoration: underline;
+      color: #d63384;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .content {
+        padding: 1.5rem;
+        margin-top: 6rem;
+      }
+
+      .content .animated-text {
+        font-size: 1.25rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        left: 1rem;
+        top: 1rem;
+      }
+
+      .navbar {
+        right: 1rem;
+        top: 1rem;
+      }
+
+      .navbar a {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+      }
+
+      .bubble {
+          width: 3rem;
+          height: 3rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="items.html">Shop</a>
+    <a href="about.html">About Us</a>
+    <a href="order.html">Order</a>
+  </nav>
+
+  <div class="logo">Closet Craft</div>
+
+  <div class="background">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <main class="content">
+    <div class="animated-text">"The right dress isn’t just clothing, it’s confidence, elegance, and self-expression."</div>
+    <p>Every outfit tells a story, and at Closet Craft, we help you make yours unforgettable.</p>
+    <div class="cta">
+      <button onclick="window.location.href='items.html'">Explore Collection</button>
+    </div>
+    <div class="auth-links">
+      <a href="login.html">Login</a> | <a href="register.html">New to Register?</a>
+    </div>
+  </main>
+
+</body>
+</html>

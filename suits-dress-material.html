@@ -1,0 +1,611 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehenga Collection</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts (Poppins for better style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #5e3370;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .product-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-box h3 {
+            font-size: 24px;
+            color: #5e3370;
+            margin-bottom: 15px;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-box .price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #5e3370;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #8e44ad;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2> Collection</h2>
+        <div class="product-container">
+      
+            <div class="product-container">
+
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-pink-threadwork-chanderi-designer-salwar-suit-ssus0019607_pink_2_large.jpg?v=1639468428" alt="Pink Threadwork Chanderi Salwar Suit">
+                    <h3>Pink Threadwork Chanderi Salwar Suit</h3>
+                    <p>This beautiful pink salwar suit is perfect for any special occasion. It is made of chanderi fabric and features delicate threadwork embroidery.</p>
+                    <div class="price">₹4,500</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-multi-threadwork-chanderi-designer-salwar-suit-ssss0020008_multi_2_large.jpg?v=1645772635" alt="Multi Threadwork Chanderi Salwar Suit">
+                    <h3>Multi Threadwork Chanderi Salwar Suit</h3>
+                    <p>This stunning multi-colored salwar suit is perfect for making a statement. It is made of chanderi fabric and features intricate threadwork embroidery.</p>
+                    <div class="price">₹5,200</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-rani-pink-zariwork-banarasi-designer-salwar-suit-ssus0017178_rani_pink_4_large.jpg?v=1640934209" alt="Rani Pink Zariwork Banarasi Salwar Suit">
+                    <h3>Rani Pink Zariwork Banarasi Salwar Suit</h3>
+                    <p>This elegant rani pink salwar suit is perfect for weddings and other formal events. It is made of banarasi fabric and features exquisite zariwork embroidery.</p>
+                    <div class="price">₹7,800</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-black-threadwork-chanderi-designer-salwar-suit-ssus0019609_black_2_large.jpg?v=1639467976" alt="Black Threadwork Chanderi Salwar Suit">
+                    <h3>Black Threadwork Chanderi Salwar Suit</h3>
+                    <p>This sophisticated black salwar suit is perfect for evening wear. It is made of chanderi fabric and features intricate threadwork embroidery.</p>
+                    <div class="price">₹4,900</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-grey-zariwork-banarasi-designer-salwarsuit-ssus0022158_grey_2_large.jpg?v=1666096619" alt="Grey Zariwork Banarasi Salwar Suit">
+                    <h3>Grey Zariwork Banarasi Salwar Suit</h3>
+                    <p>This stylish grey salwar suit is perfect for both casual and formal occasions. It is made of banarasi fabric and features beautiful zariwork embroidery.</p>
+                    <div class="price">₹6,500</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-peach-zariwork-banarasi-designer-salwarsuit-ssus0022158_peach_2_large.jpg?v=1666096679" alt="Peach Zariwork Banarasi Salwar Suit">
+                    <h3>Peach Zariwork Banarasi Salwar Suit</h3>
+                    <p>This lovely peach salwar suit is perfect for adding a touch of elegance to your wardrobe. It is made of banarasi fabric and features intricate zariwork embroidery.</p>
+                    <div class="price">₹7,200</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-beige-printed-semi-crepe-designer-salwarsuit-ssss0021855_beige_2_large.jpg?v=1669197907" alt="Beige Printed Semi Crepe Salwar Suit">
+                    <h3>Beige Printed Semi Crepe Salwar Suit</h3>
+                    <p>This chic beige salwar suit is perfect for everyday wear. It is made of semi crepe fabric and features a beautiful print.</p>
+                    <div class="price">₹3,800</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-black-sequins-semi-crepe-designer-salwar-suit-ssus0018329_black_2_large.jpg?v=1633867009" alt="Black Sequins Semi Crepe Salwar Suit">
+                    <h3>Black Sequins Semi Crepe Salwar Suit</h3>
+                    <p>This glamorous black salwar suit is perfect for parties and special occasions. It is made of semi crepe fabric and features dazzling sequins work.</p>
+                    <div class="price">₹5,500</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-onion-pink-zariwork-banarasi-designer-salwar-ssus0022159_onion_pink_2_large.jpg?v=1665146096" alt="Onion Pink Zariwork Banarasi Salwar Suit">
+                    <h3>Onion Pink Zariwork Banarasi Salwar Suit</h3>
+                    <p>This delicate onion pink salwar suit is perfect for adding a touch of femininity to your look. It is made of banarasi fabric and features intricate zariwork embroidery.</p>
+                    <div class="price">₹7,100</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/gold-zariwork-brocade-designer-salwar-suit-ssus0014331_gold_yellow_3_large.jpg?v=1691588203" alt="Gold Zariwork Brocade Salwar Suit">
+                    <h3>Gold Zariwork Brocade Salwar Suit</h3>
+                    <p>This luxurious gold salwar suit is perfect for making a grand entrance. It is made of brocade fabric and features exquisite zariwork embroidery.</p>
+                    <div class="price">₹9,800</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-parrot-green-sequins-chanderi-designer-salwar-suit-ssus0019606_parrot_green_2_large.jpg?v=1639466192" alt="Parrot Green Sequins Chanderi Salwar Suit">
+                    <h3>Parrot Green Sequins Chanderi Salwar Suit</h3>
+                    <p>This vibrant parrot green salwar suit is perfect for adding a pop of color to your wardrobe. It is made of chanderi fabric and features sparkling sequins work.</p>
+                    <div class="price">₹5,900</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-pink-sequins-tissue-designer-salwar-suit-ssus0032230_pink__1_2_large.jpg?v=1707730171" alt="Pink Sequins Tissue Salwar Suit">
+                    <h3>Pink Sequins Tissue Salwar Suit</h3>
+                    <p>This pretty pink salwar suit is perfect for a casual yet stylish look. It is made of tissue fabric and features delicate sequins work.</p>
+                    <div class="price">₹4,200</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-purple-printed-tissue-designer-salwar-suit-ssus0033136_purple_2_large.jpg?v=1707732235" alt="Purple Printed Tissue Salwar Suit">
+                    <h3>Purple Printed Tissue Salwar Suit</h3>
+                    <p>This stylish purple salwar suit is perfect for everyday wear. It is made of tissue fabric and features a beautiful print.</p>
+                    <div class="price">₹3,900</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-lavender-printed-tissue-designer-salwar-suit-ssus0033248_lavender_1_2_57d32e85-90c1-41da-a16e-83aae62e77b3_large.jpg?v=1707732324" alt="Lavender Printed Tissue Salwar Suit">
+                    <h3>Lavender Printed Tissue Salwar Suit</h3>
+                    <p>This lovely lavender salwar suit is perfect for adding a touch of femininity to your look. It is made of tissue fabric and features a beautiful print.</p>
+                    <div class="price">₹4,100</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-purple-zariwork-rawsilk-designer-salwar-suit-ssus0033135_purple_1_4_large.jpg?v=1703740285" alt="Purple Zariwork Rawsilk Salwar Suit">
+                    <h3>Purple Zariwork Rawsilk Salwar Suit</h3>
+                    <p>This elegant purple salwar suit is perfect for special occasions. It is made of rawsilk fabric and features intricate zariwork embroidery.</p>
+                    <div class="price">₹6,800</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-cream-threadwork-chanderi-designer-salwar-suit-ssss0030337_cream_navy_blue_4_large.jpg?v=1687175435" alt="Cream Threadwork Chanderi Salwar Suit">
+                    <h3>Cream Threadwork Chanderi Salwar Suit</h3>
+                    <p>This beautiful cream salwar suit is perfect for a classic and timeless look. It is made of chanderi fabric and features delicate threadwork embroidery.</p>
+                    <div class="price">₹4,600</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-grey-printed-tissue-designer-salwar-suit-ssus0033136_grey_2_large.jpg?v=1707731334" alt="Grey Printed Tissue Salwar Suit">
+                    <h3>Grey Printed Tissue Salwar Suit</h3>
+                    <p>This stylish grey salwar suit is perfect for everyday wear. It is made of tissue fabric and features a beautiful print.</p>
+                    <div class="price">₹3,800</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                  <div class="product-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-seagreen-printed-cottonblend-designer-salwar-suit-ssus0033072_sea_green_1_2_large.jpg?v=1715062104" alt="Seagreen Printed Cottonblend Salwar Suit">
+                    <h3>Seagreen Printed Cottonblend Salwar Suit</h3>
+                    <p>This refreshing seagreen salwar suit is perfect for a casual yet stylish look. It is made of cottonblend fabric and features a beautiful print.</p>
+                    <div class="price">₹3,500</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-skyblue-printed-tissue-designer-salwar-suit-ssus0032234_sky_blue_1_2_2188f33b-1eb1-4eb6-b065-4beee677a041_large.jpg?v=1707730497" alt="Skyblue Printed Tissue Salwar Suit">
+                        <h3>Skyblue Printed Tissue Salwar Suit</h3>
+                        <p>This pretty skyblue salwar suit is perfect for a casual yet stylish look. It is made of tissue fabric and features a beautiful print.</p>
+                        <div class="price">₹4,000</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/products/koskii-grey-threadwork-georgette-designer-salwar-suit-ssus0020869_grey_2_large.jpg?v=1653121823" alt="Grey Threadwork Georgette Salwar Suit">
+                        <h3>Grey Threadwork Georgette Salwar Suit</h3>
+                        <p>This elegant grey salwar suit is perfect for special occasions. It is made of georgette fabric and features intricate threadwork embroidery.</p>
+                        <div class="price">₹5,800</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-lightgrey-zariwork-artsilk-designer-salwar-suit-ssus0032227_light_grey_1_5_large.jpg?v=1698757013" alt="Lightgrey Zariwork Artsilk Salwar Suit">
+                        <h3>Lightgrey Zariwork Artsilk Salwar Suit</h3>
+                        <p>This stylish lightgrey salwar suit is perfect for both casual and formal occasions. It is made of artsilk fabric and features beautiful zariwork embroidery.</p>
+                        <div class="price">₹6,200</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-seagreen-sequins-organza-designer-salwar-suit-ssus0033263_sea_green_1_2_fde7a3f7-3476-4ee0-a21e-1ad45c0091aa_large.jpg?v=1707730006" alt="Seagreen Sequins Organza Salwar Suit">
+                        <h3>Seagreen Sequins Organza Salwar Suit</h3>
+                        <p>This glamorous seagreen salwar suit is perfect for parties and special occasions. It is made of organza fabric and features sparkling sequins work.</p>
+                        <div class="price">₹7,500</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-yellow-printed-cottonblend-designer-salwar-suit-ssus0033072_yellow_1_2_large.jpg?v=1715256980" alt="Yellow Printed Cottonblend Salwar Suit">
+                        <h3>Yellow Printed Cottonblend Salwar Suit</h3>
+                        <p>This cheerful yellow salwar suit is perfect for a casual yet stylish look. It is made of cottonblend fabric and features a beautiful print.</p>
+                        <div class="price">₹3,600</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-seagreen-printed-tissue-designer-salwar-suit-ssus0033248_sea_green__2_678411eb-b055-46f1-980f-85c70aa49807_large.jpg?v=1707979991" alt="Seagreen Printed Tissue Salwar Suit">
+                        <h3>Seagreen Printed Tissue Salwar Suit</h3>
+                        <p>This beautiful seagreen salwar suit is perfect for adding a touch of elegance to your wardrobe. It is made of tissue fabric and features a beautiful print.</p>
+                        <div class="price">₹4,300</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-lightbrown-sequins-tissue-designer-salwar-suit-ssus0032230_light_brown_1_large.jpg?v=1707730742" alt="Lightbrown Sequins Tissue Salwar Suit">
+                        <h3>Lightbrown Sequins Tissue Salwar Suit</h3>
+                        <p>This glamorous lightbrown salwar suit is perfect for parties and special occasions. It is made of tissue fabric and features sparkling sequins work.</p>
+                        <div class="price">₹5,600</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-pink-printed-organza-designer-salwar-suit-ssus0038320_pink_1_2_large.jpg?v=1721569307" alt="Pink Printed Organza Salwar Suit">
+                        <h3>Pink Printed Organza Salwar Suit</h3>
+                        <p>This lovely pink salwar suit is perfect for a special occasion. It is made of organza fabric and features a beautiful print.</p>
+                        <div class="price">₹6,900</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-yellow-printed-tissue-designer-salwar-suit-ssus0032234_yellow_1_2_large.jpg?v=1707730610" alt="Yellow Printed Tissue Salwar Suit">
+                        <h3>Yellow Printed Tissue Salwar Suit</h3>
+                        <p>This cheerful yellow salwar suit is perfect for everyday wear. It is made of tissue fabric and features a beautiful print.</p>
+                        <div class="price">₹3,900</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+               
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-pink-printed-tissue-designer-salwar-suit-ssus0032234_pink__1_2_large.jpg?v=1707730372" alt="Pink Printed Tissue Salwar Suit">
+                        <h3>Pink Printed Tissue Salwar Suit</h3>
+                        <p>This beautiful pink salwar suit is perfect for everyday wear. It is made of tissue fabric and features a lovely print.</p>
+                        <div class="price">₹3,700</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-leafgreen-sequins-tissue-designer-salwar-suit-ssss0033073_leaf_green_5_large.jpg?v=1712734493" alt="Leafgreen Sequins Tissue Salwar Suit">
+                        <h3>Leafgreen Sequins Tissue Salwar Suit</h3>
+                        <p>This vibrant leafgreen salwar suit is perfect for adding a touch of color to your wardrobe.  Made of tissue, it features delicate sequin work.</p>
+                        <div class="price">₹4,400</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-peach-sequins-organza-designer-salwar-suit-ssus0033263_peach_1_1_b3830677-1894-4a86-aceb-e6f221d91d4a_large.jpg?v=1707730090" alt="Peach Sequins Organza Salwar Suit">
+                        <h3>Peach Sequins Organza Salwar Suit</h3>
+                        <p>This glamorous peach salwar suit is perfect for parties and special occasions. Made of organza, it features sparkling sequin embellishments.</p>
+                        <div class="price">₹7,200</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-royalblue-printed-chanderi-designer-salwar-suit-ssus0038714_royal_blue_1_2_large.jpg?v=1724926400" alt="Royal Blue Printed Chanderi Salwar Suit">
+                        <h3>Royal Blue Printed Chanderi Salwar Suit</h3>
+                        <p>This elegant royal blue salwar suit is made of chanderi and features a beautiful print, perfect for a traditional look.</p>
+                        <div class="price">₹5,100</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-maroon-printed-banarasi-designer-salwar-suit-ssus0038805_maroon_1_5_large.jpg?v=1725634383" alt="Maroon Printed Banarasi Salwar Suit">
+                        <h3>Maroon Printed Banarasi Salwar Suit</h3>
+                        <p>This rich maroon salwar suit, crafted from banarasi fabric, features a striking print and is ideal for special occasions.</p>
+                        <div class="price">₹6,800</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-mauve-zariwork-tissue-designer-salwar-suit-ssus0038307_mauve_1_2_large.jpg?v=1720610291" alt="Mauve Zariwork Tissue Salwar Suit">
+                        <h3>Mauve Zariwork Tissue Salwar Suit</h3>
+                        <p>This sophisticated mauve salwar suit is made of tissue fabric and features beautiful zari work. Perfect for festive events.</p>
+                        <div class="price">₹5,500</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-onionpink-threadwork-cottonblend-designer-salwar-suit-ssus0039220_onion_pink_1_3_large.jpg?v=1725895934" alt="Onion Pink Threadwork Cottonblend Salwar Suit">
+                        <h3>Onion Pink Threadwork Cottonblend Salwar Suit</h3>
+                        <p>This charming onion pink salwar suit is a cotton blend, adorned with threadwork, offering a comfortable yet elegant option.</p>
+                        <div class="price">₹4,200</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-brown-threadwork-semicrepe-designer-salwar-suit-ssus0038783_brown_1_2_large.jpg?v=1724738500" alt="Brown Threadwork Semicrepe Salwar Suit">
+                        <h3>Brown Threadwork Semicrepe Salwar Suit</h3>
+                        <p>This stylish brown salwar suit is made of semi crepe and features detailed threadwork. A great choice for various occasions.</p>
+                        <div class="price">₹4,800</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-seagreen-printed-semicrepe-designer-salwar-suit-ssus0033137_sea_green_1_2_960b339f-8ab8-499b-988a-80b0af67ce00_large.jpg?v=1708517286" alt="Seagreen Printed Semicrepe Salwar Suit">
+                        <h3>Seagreen Printed Semicrepe Salwar Suit</h3>
+                        <p>This lovely seagreen salwar suit is made of semi crepe and features an attractive print. Comfortable and stylish.</p>
+                        <div class="price">₹3,900</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+              <div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-peacockblue-zariwork-banarasi-designer-salwar-suit-ssus0038805_peacock_blue_1_2_large.jpg?v=1725633595" alt="Peacock Blue Zariwork Banarasi Salwar Suit">
+        <h3>Peacock Blue Zariwork Banarasi Salwar Suit</h3>
+        <p>This stunning peacock blue salwar suit is crafted from banarasi fabric and features intricate zari work.  Perfect for weddings and festive occasions.</p>
+        <div class="price">₹7,500</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-pistagreen-zariwork-tissue-designer-salwar-suit-ssus0038307_pista_green_1_2_large.jpg?v=1720610347" alt="Pistagreen Zariwork Tissue Salwar Suit">
+        <h3>Pistagreen Zariwork Tissue Salwar Suit</h3>
+        <p>This elegant pistagreen salwar suit is made of tissue fabric and features beautiful zari embroidery. Ideal for celebrations and special events.</p>
+        <div class="price">₹6,200</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-turquoiseblue-printed-banarasi-designer-salwar-suit-ssus0038810_turquoise_blue_1_2_large.jpg?v=1725634664" alt="Turquoise Blue Printed Banarasi Salwar Suit">
+        <h3>Turquoise Blue Printed Banarasi Salwar Suit</h3>
+        <p>This vibrant turquoise blue salwar suit is made of banarasi fabric and features a unique print. A stylish choice for various occasions.</p>
+        <div class="price">₹5,800</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-ranipink-printed-chanderi-designer-salwar-suit-ssus0038715_rani_pink_1_2_large.jpg?v=1724926607" alt="Rani Pink Printed Chanderi Salwar Suit">
+        <h3>Rani Pink Printed Chanderi Salwar Suit</h3>
+        <p>This beautiful rani pink salwar suit is made of chanderi and showcases a lovely print.  Perfect for traditional gatherings and festivities.</p>
+        <div class="price">₹5,200</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-purple-zariwork-banarasi-designer-salwar-suit-ssus0038806_purple_1_2_large.jpg?v=1725905176" alt="Purple Zariwork Banarasi Salwar Suit">
+        <h3>Purple Zariwork Banarasi Salwar Suit</h3>
+        <p>This regal purple salwar suit is made of banarasi fabric and features exquisite zari work.  Ideal for weddings and grand celebrations.</p>
+        <div class="price">₹7,200</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-skyblue-zariwork-tissue-designer-salwar-suit-ssus0038307_sky_blue_1_2_large.jpg?v=1720610261" alt="Skyblue Zariwork Tissue Salwar Suit">
+        <h3>Skyblue Zariwork Tissue Salwar Suit</h3>
+        <p>This charming skyblue salwar suit is made of tissue and features delicate zari work. A perfect choice for festive occasions.</p>
+        <div class="price">₹6,500</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-rust-zariwork-banarasi-designer-salwar-suit-ssus0038806_rust_1_1_large.jpg?v=1725905332" alt="Rust Zariwork Banarasi Salwar Suit">
+        <h3>Rust Zariwork Banarasi Salwar Suit</h3>
+        <p>This unique rust-colored salwar suit is made of banarasi and features beautiful zari embroidery.  A great option for a traditional look.</p>
+        <div class="price">₹7,000</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-peach-zariwork-georgette-designer-salwar-suit-ssus0038967_peach_1_2_large.jpg?v=1724742199" alt="Peach Zariwork Georgette Salwar Suit">
+        <h3>Peach Zariwork Georgette Salwar Suit</h3>
+        <p>This pretty peach salwar suit is made of georgette and features intricate zari work. A lovely choice for special events.</p>
+        <div class="price">₹6,000</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-skyblue-threadwork-semicrepe-designer-salwar-suit-ssus0038314_sky_blue_1_2_large.jpg?v=1724736894" alt="Skyblue Threadwork Semicrepe Salwar Suit">
+        <h3>Skyblue Threadwork Semicrepe Salwar Suit</h3>
+        <p>This charming skyblue salwar suit is semi crepe with detailed threadwork. Comfortable and stylish for various occasions.</p>
+        <div class="price">₹4,500</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+<div class="product-item">
+    <div class="product-box">
+        <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-bottlegreen-zariwork-semicrepe-designer-salwar-suit-ssus0041105_bottle_green_1_2_large.jpg?v=1732188108" alt="Bottlegreen Zariwork Semicrepe Salwar Suit">
+        <h3>Bottlegreen Zariwork Semicrepe Salwar Suit</h3>
+        <p>This elegant bottlegreen salwar suit is made of semi crepe and features beautiful zari work. Perfect for festive wear.</p>
+        <div class="price">₹6,800</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div></div>
+            <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+        </div>
+        
+      
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+                document.querySelectorAll(".add-to-cart-btn").forEach((button, index) => {
+                    button.addEventListener("click", function () {
+                        let productBox = button.closest(".product-box");
+                        let productName = productBox.querySelector("h3").textContent;
+                        let productPrice = productBox.querySelector(".price").textContent;
+                        let productImage = productBox.querySelector("img").src;
+        
+                        let product = { name: productName, price: productPrice, image: productImage };
+                        cart.push(product);
+                        localStorage.setItem("cart", JSON.stringify(cart));
+        
+                        // Redirect to cart page
+                        window.location.href = "cart.html";
+                    });
+                });
+            });
+        </script>
+        
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        </body>
+        </html>

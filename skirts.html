@@ -1,0 +1,648 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehenga Collection</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts (Poppins for better style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #5e3370;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .product-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-box h3 {
+            font-size: 24px;
+            color: #5e3370;
+            margin-bottom: 15px;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-box .price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #5e3370;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #8e44ad;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Collection</h2>
+        <div class="product-container">
+            
+
+
+        
+          
+
+            <div class="product-item">
+                <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20250120/8EpA/678e477a663dbe1c5fe627c0/-473Wx593H-443054639-brown-MODEL.jpg" alt="Skirt 1">
+                <div class="product-details">
+                    <h3>Brown Skirt</h3>
+                    <div class="description">Elegant Brown Skirt with intricate embroidery. Perfect for festive occasions. Made from high-quality fabric.</div>
+                    <div class="price">₹999</div>
+                    <button class="add-to-cart-btn" data-item="Brown Skirt - ₹999">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240904/V7ud/66d81e8f1d763220fabf66dc/-473Wx593H-700366575-beige-MODEL.jpg" alt="Skirt 2">
+                <div class="product-details">
+                    <h3>Beige Skirt</h3>
+                    <div class="description">Stylish Beige Skirt with a modern design. Comfortable and perfect for casual wear. Made from breathable cotton.</div>
+                    <div class="price">₹1299</div>
+                    <button class="add-to-cart-btn" data-item="Beige Skirt - ₹1299">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240819/BH5G/66c3317b1d763220fa843167/-473Wx593H-443046622-offwhite-MODEL.jpg" alt="Skirt 3">
+                <div class="product-details">
+                    <h3>Off-white Skirt</h3>
+                    <div class="description">Off-white skirt, perfect for summer, made with breathable linen.</div>
+                    <div class="price">₹1499</div>
+                    <button class="add-to-cart-btn" data-item="Off-white Skirt - ₹1499">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item"> <div class="product-box"></div>
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240926/wztC/66f53ae4f9b8ef490b6c8869/-473Wx593H-443053181-olive-MODEL.jpg" alt="Skirt 4">
+                <div class="product-details">
+                    <h3>Olive Skirt</h3>
+                    <div class="description">Olive green skirt, casual and stylish, made of cotton.</div>
+                    <div class="price">₹1199</div>
+                    <button class="add-to-cart-btn" data-item="Olive Skirt - ₹1199">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240909/lZoj/66debb3a6f60443f316395da/-473Wx593H-700392479-navy-MODEL.jpg" alt="Skirt 5">
+                <div class="product-details">
+                    <h3>Navy Skirt</h3>
+                    <div class="description">Navy blue skirt, classic and versatile, suitable for any occasion.</div>
+                    <div class="price">₹1399</div>
+                    <button class="add-to-cart-btn" data-item="Navy Skirt - ₹1399">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20241021/RcT3/67161853260f9c41e88bf4ff/-473Wx593H-700616986-black-MODEL.jpg" alt="Skirt 6">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Black skirt, a wardrobe essential, elegant and timeless.</div>
+                    <div class="price">₹1599</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1599">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20241029/vJuW/67201b89260f9c41e8aa6d77/-473Wx593H-700665543-blue-MODEL.jpg" alt="Skirt 7">
+                <div class="product-details">
+                    <h3>Blue Skirt</h3>
+                    <div class="description">Blue skirt, vibrant and stylish, perfect for festive occasions.</div>
+                    <div class="price">₹1699</div>
+                    <button class="add-to-cart-btn" data-item="Blue Skirt - ₹1699">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240822/0KYU/66c6eae86f60443f311eb598/-473Wx593H-443049327-ltblue-MODEL.jpg" alt="Skirt 8">
+                <div class="product-details">
+                    <h3>Light Blue Skirt</h3>
+                    <div class="description">Light blue skirt, cool and refreshing, ideal for summer wear.</div>
+                    <div class="price">₹1249</div>
+                    <button class="add-to-cart-btn" data-item="Light Blue Skirt - ₹1249">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240909/iCAu/66debbab1d763220fad0c4c6/-473Wx593H-700392479-maroon-MODEL.jpg" alt="Skirt 9">
+                <div class="product-details">
+                    <h3>Maroon Skirt</h3>
+                    <div class="description">Maroon skirt, rich and elegant, perfect for special events.</div>
+                    <div class="price">₹1549</div>
+                    <button class="add-to-cart-btn" data-item="Maroon Skirt - ₹1549">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240723/OCAq/669fb0026f60443f319c01a8/-473Wx593H-700221783-black-MODEL.jpg" alt="Skirt 10">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Classic Black Skirt with subtle self-design. Made from premium cotton fabric for ultimate comfort.</div>
+                    <div class="price">₹1449</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1449">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240928/DmVM/66f71873260f9c41e838a65d/-473Wx593H-700501589-brown-MODEL.jpg" alt="Skirt 11">
+                <div class="product-details">
+                    <h3>Brown Skirt</h3>
+                    <div class="description">Stylish Brown Skirt with a mandarin collar. Perfect for both casual and formal occasions. Crafted from soft and durable material.</div>
+                    <div class="price">₹1399</div>
+                    <button class="add-to-cart-btn" data-item="Brown Skirt - ₹1399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20241004/Kk2x/66ff1a2b260f9c41e852a1ad/-473Wx593H-700533910-blue-MODEL.jpg" alt="Skirt 12">
+                <div class="product-details">
+                    <h3>Blue Skirt</h3>
+                    <div class="description">Vibrant Blue Skirt with a unique print. A stylish addition to your wardrobe. Made from comfortable and breathable fabric.</div>
+                    <div class="price">₹1549</div>
+                    <button class="add-to-cart-btn" data-item="Blue Skirt - ₹1549">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240227/7rqQ/65ddf55005ac7d77bb7fd320/-473Wx593H-469578009-navy-MODEL.jpg" alt="Skirt 13">
+                <div class="product-details">
+                    <h3>Navy Skirt</h3>
+                    <div class="description">Classic Navy Blue Skirt with a subtle texture. Ideal for formal events. Made from high-quality fabric for a refined look.</div>
+                    <div class="price">₹1699</div>
+                    <button class="add-to-cart-btn" data-item="Navy Skirt - ₹1699">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240831/0iUs/66d29a731d763220fab34c1b/-473Wx593H-700350078-blue-MODEL.jpg" alt="Skirt 14">
+                <div class="product-details">
+                    <h3>Blue Skirt</h3>
+                    <div class="description">Light Blue Skirt with a stylish pattern. Perfect for casual outings. Crafted from soft and comfortable material.</div>
+                    <div class="price">₹1299</div>
+                    <button class="add-to-cart-btn" data-item="Blue Skirt - ₹1299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20241013/b6Hr/670bf519f9b8ef490bb4dc1d/-473Wx593H-700572851-black-MODEL.jpg" alt="Skirt 15">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Elegant Black Skirt with a modern twist. Suitable for both formal and informal occasions. Made from premium fabric for a luxurious feel.</div>
+                    <div class="price">₹1799</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240705/YLCg/6687fe756f60443f317d15ed/-473Wx593H-700165973-coffee-MODEL.jpg" alt="Skirt 16">
+                <div class="product-details">
+                    <h3>Coffee Skirt</h3>
+                    <div class="description">Stylish Coffee Brown Skirt with a classic design. Perfect for everyday wear. Made from breathable cotton for all-day comfort.</div>
+                    <div class="price">₹1199</div>
+                    <button class="add-to-cart-btn" data-item="Coffee Skirt - ₹1199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240301/Zgui/65e0e65005ac7d77bb8b9b86/-473Wx593H-467124226-black-MODEL.jpg" alt="Skirt 17">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Timeless Black Skirt with a simple yet elegant design. A must-have in every wardrobe. Made from soft and comfortable fabric.</div>
+                    <div class="price">₹1349</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1349">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230624/cHn8/649606dca9b42d15c9cea7a7/-473Wx593H-465096707-yellow-MODEL.jpg" alt="Skirt 18">
+                <div class="product-details">
+                    <h3>Yellow Skirt</h3>
+                    <div class="description">Bright Yellow Skirt with a cheerful vibe. Perfect for festive occasions and celebrations. Made from high-quality fabric for a vibrant look.</div>
+                    <div class="price">₹1599</div>
+                    <button class="add-to-cart-btn" data-item="Yellow Skirt - ₹1599">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230807/FURH/64d0f6e1eebac147fcae4c78/-473Wx593H-466428464-black-MODEL.jpg" alt="Skirt 19">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Stylish Black Skirt with a modern design. Perfect for casual outings and gatherings. Made from soft and breathable fabric.</div>
+                    <div class="price">₹1499</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240115/ZFJb/65a50c8416fd2c6e6aa6c79f/-473Wx593H-466980723-black-MODEL.jpg" alt="Skirt 20">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Elegant Black Skirt with intricate detailing. Ideal for special occasions and celebrations. Crafted from high-quality fabric for a rich look.</div>
+                    <div class="price">₹1699</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1699">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230907/u0vs/64f9fa83afa4cf41f5d0ccb3/-473Wx593H-466544514-burgundy-MODEL.jpg" alt="Skirt 21">
+                <div class="product-details">
+                    <h3>Burgundy Skirt</h3>
+                    <div class="description">Rich Burgundy Skirt with a classic design. Perfect for festive events and gatherings. Made from soft and comfortable material.</div>
+                    <div class="price">₹1549</div>
+                    <button class="add-to-cart-btn" data-item="Burgundy Skirt - ₹1549">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240820/bXfO/66c4395a1d763220fa868ee7/-473Wx593H-443043759-black-MODEL.jpg" alt="Skirt 22">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Timeless Black Skirt with a subtle texture. A versatile piece for any occasion. Made from premium fabric for a sophisticated look.</div>
+                    <div class="price">₹1799</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240403/AQ3B/660ce82616fd2c6e6a96fc8b/-473Wx593H-467219665-black-MODEL.jpg" alt="Skirt 23">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Elegant Black Skirt with a modern silhouette. Ideal for formal events and gatherings. Crafted from high-quality material for a refined feel.</div>
+                    <div class="price">₹1899</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230624/nQkA/649605c9a9b42d15c9ce7ae2/-473Wx593H-465096707-red-MODEL.jpg" alt="Skirt 24">
+                <div class="product-details">
+                    <h3>Red Skirt</h3>
+                    <div class="description">Vibrant Red Skirt with a traditional design. Perfect for festive occasions and celebrations. Made from soft and comfortable fabric.</div>
+                    <div class="price">₹1649</div>
+                    <button class="add-to-cart-btn" data-item="Red Skirt - ₹1649">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20241001/g7nz/66fbdf23260f9c41e84a0f65/-473Wx593H-443054640-brown-MODEL.jpg" alt="Skirt 25">
+                <div class="product-details">
+                    <h3>Brown Skirt</h3>
+                    <div class="description">Stylish Brown Skirt with a contemporary design. Suitable for both casual and formal wear. Made from premium fabric for a polished look.</div>
+                    <div class="price">₹1749</div>
+                    <button class="add-to-cart-btn" data-item="Brown Skirt - ₹1749">Add to Cart</button>
+                </div>
+            </div>
+           
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240207/kJli/65c305f516fd2c6e6ae1edfe/-473Wx593H-467039652-green-MODEL.jpg" alt="Skirt 26">
+                <div class="product-details">
+                    <h3>Green Skirt</h3>
+                    <div class="description">Green Skirt with a unique pattern. Perfect for casual outings and gatherings. Made from breathable cotton for all-day comfort.</div>
+                    <div class="price">₹1399</div>
+                    <button class="add-to-cart-btn" data-item="Green Skirt - ₹1399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20250123/8djc/6791726f663dbe1c5ff3df4a/-473Wx593H-701091079-blue-MODEL.jpg" alt="Skirt 27">
+                <div class="product-details">
+                    <h3>Blue Skirt</h3>
+                    <div class="description">Blue Skirt with a classic design. Ideal for both formal and informal occasions. Made from soft and comfortable material.</div>
+                    <div class="price">₹1599</div>
+                    <button class="add-to-cart-btn" data-item="Blue Skirt - ₹1599">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230807/jwlQ/64d0f2a1a9b42d15c992663b/-473Wx593H-466426066-khaki-MODEL.jpg" alt="Skirt 28">
+                <div class="product-details">
+                    <h3>Khaki Skirt</h3>
+                    <div class="description">Khaki Skirt with a casual and relaxed style. Perfect for everyday wear. Made from breathable fabric for all-day comfort.</div>
+                    <div class="price">₹1249</div>
+                    <button class="add-to-cart-btn" data-item="Khaki Skirt - ₹1249">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240307/Km11/65e9ef5305ac7d77bb9fb350/-473Wx593H-469602261-black-MODEL.jpg" alt="Skirt 29">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Stylish Black Skirt with a modern design. Ideal for both formal and informal occasions. Made from premium fabric for a sophisticated look.</div>
+                    <div class="price">₹1699</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1699">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240723/Wqxg/669f961f1d763220fa1151bd/-473Wx593H-467127406-multi-MODEL.jpg" alt="Skirt 30">
+                <div class="product-details">
+                    <h3>Multi-colored Skirt</h3>
+                    <div class="description">Multi-colored Skirt with a vibrant print. Perfect for festive occasions and celebrations. Made from soft and comfortable material.</div>
+                    <div class="price">₹1599</div>
+                    <button class="add-to-cart-btn" data-item="Multi-colored Skirt - ₹1599">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240610/Ayd5/66662d2b05ac7d77bbb10673/-473Wx593H-700061601-indigo-MODEL.jpg" alt="Skirt 31">
+                <div class="product-details">
+                    <h3>Indigo Skirt</h3>
+                    <div class="description">Indigo Skirt with a classic design. A timeless piece for any wardrobe. Made from high-quality fabric for a refined look.</div>
+                    <div class="price">₹1499</div>
+                    <button class="add-to-cart-btn" data-item="Indigo Skirt - ₹1499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240909/hDiL/66debbab1d763220fad0c4c3/-473Wx593H-700392479-blue-MODEL.jpg" alt="Skirt 32">
+                <div class="product-details">
+                    <h3>Blue Skirt</h3>
+                    <div class="description">Blue Skirt with a modern print. Ideal for casual outings and gatherings. Crafted from soft and breathable fabric for all-day comfort.</div>
+                    <div class="price">₹1349</div>
+                    <button class="add-to-cart-btn" data-item="Blue Skirt - ₹1349">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240718/3HRC/66982d5a1d763220fada106a/-473Wx593H-700204324-offwhite-MODEL.jpg" alt="Skirt 33">
+                <div class="product-details">
+                    <h3>Off-white Skirt</h3>
+                    <div class="description">Off-white Skirt with a subtle texture. Perfect for both formal and informal occasions. Made from premium fabric for a luxurious feel.</div>
+                    <div class="price">₹1799</div>
+                    <button class="add-to-cart-btn" data-item="Off-white Skirt - ₹1799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20241220/PdiX/676586e9c148fa1b30520133/-473Wx593H-700956214-red-MODEL.jpg" alt="Skirt 34">
+                <div class="product-details">
+                    <h3>Red Skirt</h3>
+                    <div class="description">Red Skirt with a traditional design. Perfect for festive occasions and celebrations. Made from soft and comfortable material.</div>
+                    <div class="price">₹1649</div>
+                    <button class="add-to-cart-btn" data-item="Red Skirt - ₹1649">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240531/3Vjg/665926c616fd2c6e6a41146a/-473Wx593H-700026449-indigo-MODEL.jpg" alt="Skirt 35">
+                <div class="product-details">
+                    <h3>Indigo Skirt</h3>
+                    <div class="description">Indigo Skirt with a modern print. Ideal for casual outings and gatherings. Crafted from soft and breathable fabric for all-day comfort.</div>
+                    <div class="price">₹1399</div>
+                    <button class="add-to-cart-btn" data-item="Indigo Skirt - ₹1399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240119/3UqP/65a9a48316fd2c6e6ab1a964/-473Wx593H-466993839-black-MODEL.jpg" alt="Skirt 36">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Black Skirt with a stylish texture. Perfect for both formal and informal occasions. Made from premium fabric for a sophisticated look.</div>
+                    <div class="price">₹1749</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1749">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20220916/zVmE/63246196f997dd1f8d049692/-473Wx593H-410331448-multi-MODEL.jpg" alt="Skirt 37">
+                <div class="product-details">
+                    <h3>Multi-colored Skirt</h3>
+                    <div class="description">Multi-colored Skirt with a vibrant and unique design. Perfect for festive occasions and celebrations. Made from soft and comfortable material.</div>
+                    <div class="price">₹1699</div>
+                    <button class="add-to-cart-btn" data-item="Multi-colored Skirt - ₹1699">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20231103/pFNj/6545179dafa4cf41f572dacb/-473Wx593H-443032633-offwhite-MODEL.jpg" alt="Skirt 38">
+                <div class="product-details">
+                    <h3>Off-white Skirt</h3>
+                    <div class="description">Off-white Skirt with a subtle texture. Perfect for both formal and informal occasions. Made from premium fabric for a luxurious feel.</div>
+                    <div class="price">₹1849</div>
+                    <button class="add-to-cart-btn" data-item="Off-white Skirt - ₹1849">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240802/b2bE/66aca9006f60443f31e47b00/-473Wx593H-443049980-ecru-MODEL.jpg" alt="Skirt 39">
+                <div class="product-details">
+                    <h3>Ecru Skirt</h3>
+                    <div class="description">Ecru Skirt with a classic design. A timeless piece for any wardrobe. Made from high-quality fabric for a refined look.</div>
+                    <div class="price">₹1549</div>
+                    <button class="add-to-cart-btn" data-item="Ecru Skirt - ₹1549">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240509/CrD1/663cd2c816fd2c6e6af7dcf4/-473Wx593H-442528406-mediumblue-MODEL.jpg" alt="Skirt 40">
+                <div class="product-details">
+                    <h3>Medium Blue Skirt</h3>
+                    <div class="description">Medium Blue Skirt with a modern print. Ideal for casual outings and gatherings. Crafted from soft and breathable fabric for all-day comfort.</div>
+                    <div class="price">₹1399</div>
+                    <button class="add-to-cart-btn" data-item="Medium Blue Skirt - ₹1399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240705/WGI1/6687fd166f60443f317cece2/-473Wx593H-700165966-brown-MODEL.jpg" alt="Skirt 41">
+                <div class="product-details">
+                    <h3>Brown Skirt</h3>
+                    <div class="description">Brown Skirt with a stylish texture. Perfect for both formal and informal occasions. Made from premium fabric for a sophisticated look.</div>
+                    <div class="price">₹1799</div>
+                    <button class="add-to-cart-btn" data-item="Brown Skirt - ₹1799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240909/RPjO/66debe4c6f60443f3164001c/-473Wx593H-700392479-green-MODEL.jpg" alt="Skirt 42">
+                <div class="product-details">
+                    <h3>Green Skirt</h3>
+                    <div class="description">Green Skirt with a unique pattern. Perfect for casual outings and gatherings. Made from breathable cotton for all-day comfort.</div>
+                    <div class="price">₹1299</div>
+                    <button class="add-to-cart-btn" data-item="Green Skirt - ₹1299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20231124/kIwB/655fb286afa4cf41f59b9afc/-473Wx593H-466822459-cream-MODEL.jpg" alt="Skirt 43">
+                <div class="product-details">
+                    <h3>Cream Skirt</h3>
+                    <div class="description">Cream Skirt with a classic design. Ideal for both formal and informal occasions. Made from soft and comfortable material.</div>
+                    <div class="price">₹1599</div>
+                    <button class="add-to-cart-btn" data-item="Cream Skirt - ₹1599">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230629/PV06/649cd547a9b42d15c91c8a48/-473Wx593H-466125677-black-MODEL.jpg" alt="Skirt 44">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Black Skirt with a stylish design. Perfect for both casual and formal wear. Made from premium fabric for a sophisticated look.</div>
+                    <div class="price">₹1749</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1749">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240702/jycM/6683e8f66f60443f3129c1df/-473Wx593H-700152732-grey-MODEL.jpg" alt="Skirt 45">
+                <div class="product-details">
+                    <h3>Grey Skirt</h3>
+                    <div class="description">Grey Skirt with a modern print. Ideal for casual outings and gatherings. Crafted from soft and breathable fabric for all-day comfort.</div>
+                    <div class="price">₹1399</div>
+                    <button class="add-to-cart-btn" data-item="Grey Skirt - ₹1399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240207/3rnW/65c331f18cdf1e0df5f0cd14/-473Wx593H-462296172-black-MODEL.jpg" alt="Skirt 46">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Black Skirt with a stylish design. Perfect for both formal and informal occasions. Made from premium fabric for a sophisticated look.</div>
+                    <div class="price">₹1799</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240821/8XWe/66c5e1a06f60443f311aaf00/-473Wx593H-443049306-offwhite-MODEL.jpg" alt="Skirt 47">
+                <div class="product-details">
+                    <h3>Off-white Skirt</h3>
+                    <div class="description">Off-white Skirt with a subtle texture. Perfect for both formal and informal occasions. Made from premium fabric for a luxurious feel.</div>
+                    <div class="price">₹1899</div>
+                    <button class="add-to-cart-btn" data-item="Off-white Skirt - ₹1899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230916/24HQ/6504bf37afa4cf41f5ea5ba3/-473Wx593H-466585540-black-MODEL.jpg" alt="Skirt 48">
+                <div class="product-details">
+                    <h3>Black Skirt</h3>
+                    <div class="description">Black Skirt with a modern print. Ideal for casual outings and gatherings. Crafted from soft and breathable fabric for all-day comfort.</div>
+                    <div class="price">₹1499</div>
+                    <button class="add-to-cart-btn" data-item="Black Skirt - ₹1499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20230508/YrhD/645910e8d55b7d0c639cabc0/-473Wx593H-469492555-green-MODEL.jpg" alt="Skirt 49">
+                <div class="product-details">
+                    <h3>Green Skirt</h3>
+                    <div class="description">Green Skirt with a unique pattern. Perfect for casual outings and gatherings. Made from breathable cotton for all-day comfort.</div>
+                    <div class="price">₹1349</div>
+                    <button class="add-to-cart-btn" data-item="Green Skirt - ₹1349">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item"> <div class="product-box">
+                <img class="product-image" src="https://assets.ajio.com/medias/sys_master/root/20240717/RB8R/6697cd001d763220fad71f73/-473Wx593H-700204330-brown-MODEL.jpg" alt="Skirt 50">
+                <div class="product-details">
+                    <h3>Brown Skirt</h3>
+                    <div class="description">Brown Skirt with a stylish design. Perfect for both formal and informal occasions. Made from premium fabric for a sophisticated look.</div>
+                    <div class="price">₹1699</div>
+                    <button class="add-to-cart-btn" data-item="Brown Skirt - ₹1699">Add to Cart</button>
+                </div>
+            </div></div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            
+                    document.querySelectorAll(".add-to-cart-btn").forEach((button, index) => {
+                        button.addEventListener("click", function () {
+                            let productBox = button.closest(".product-box");
+                            let productName = productBox.querySelector("h3").textContent;
+                            let productPrice = productBox.querySelector(".price").textContent;
+                            let productImage = productBox.querySelector("img").src;
+            
+                            let product = { name: productName, price: productPrice, image: productImage };
+                            cart.push(product);
+                            localStorage.setItem("cart", JSON.stringify(cart));
+            
+                            // Redirect to cart page
+                            window.location.href = "cart.html";
+                        });
+                    });
+                });
+            </script>
+            </div>
+            </div>
+        
+                
+            </body></html>

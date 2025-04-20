@@ -1,0 +1,652 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehenga Collection</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts (Poppins for better style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #5e3370;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .product-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-box h3 {
+            font-size: 24px;
+            color: #5e3370;
+            margin-bottom: 15px;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-box .price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #5e3370;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #8e44ad;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2> Collection</h2>
+        <div class="product-container">
+
+
+            <div class="product-item">
+                <div class="product-box">
+                <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875201984-18.jpg" alt="Jeans 1">
+                <h3>Blue Slim Fit Jeans</h3>
+                <p>Stylish slim fit jeans in a classic blue wash. Comfortable and perfect for everyday wear.</p>
+                <div class="price">₹1,999</div>
+                <button class="add-to-cart-btn" data-item="Blue Slim Fit Jeans - ₹1,999">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875219064-18.jpg" alt="Jeans 2">
+                <h3>Black Skinny Jeans</h3>
+                <p>Trendy black skinny jeans. A wardrobe essential for a sleek and modern look.</p>
+                <div class="price">₹2,299</div>
+                <button class="add-to-cart-btn" data-item="Black Skinny Jeans - ₹2,299">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875202585-18.jpg" alt="Jeans 3">
+                <h3>Light Wash Boyfriend Jeans</h3>
+                <p>Casual light wash boyfriend jeans for a relaxed and comfortable fit.</p>
+                <div class="price">₹1,799</div>
+                <button class="add-to-cart-btn" data-item="Light Wash Boyfriend Jeans - ₹1,799">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875201939-18.jpg" alt="Jeans 4">
+                <h3>Dark Wash Straight Leg Jeans</h3>
+                <p>Classic dark wash straight leg jeans. A versatile choice for any occasion.</p>
+                <div class="price">₹2,199</div>
+                <button class="add-to-cart-btn" data-item="Dark Wash Straight Leg Jeans - ₹2,199">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875194187-18.jpg" alt="Jeans 5">
+                <h3>Grey Distressed Jeans</h3>
+                <p>Edgy grey distressed jeans for a trendy and stylish look.</p>
+                <div class="price">₹1,949</div>
+                <button class="add-to-cart-btn" data-item="Grey Distressed Jeans - ₹1,949">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875194705-18.jpg" alt="Jeans 6">
+                <h3>White Wide Leg Jeans</h3>
+                <p>Chic white wide leg jeans for a fashionable and elegant style.</p>
+                <div class="price">₹2,499</div>
+                <button class="add-to-cart-btn" data-item="White Wide Leg Jeans - ₹2,499">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-box">
+                <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875316275-18.jpg" alt="Jeans 7">
+                <h3>Olive Green Cargo Jeans</h3>
+                <p>Functional and stylish olive green cargo jeans with multiple pockets.</p>
+                <div class="price">₹2,099</div>
+                <button class="add-to-cart-btn" data-item="Olive Green Cargo Jeans - ₹2,099">Add to Cart</button>
+                </div>
+            </div>
+           
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875202738-18.jpg" alt="Jeans 8">
+                    <h3>Ripped Black Jeans</h3>
+                    <p>Bold ripped black jeans for a rock-chic and rebellious vibe.</p>
+                    <div class="price">₹1,899</div>
+                    <button class="add-to-cart-btn" data-item="Ripped Black Jeans - ₹1,899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875012061-18.jpg" alt="Jeans 9">
+                    <h3>Dark Wash Bootcut Jeans</h3>
+                    <p>Classic dark wash bootcut jeans. Perfect for pairing with boots.</p>
+                    <div class="price">₹2,399</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Bootcut Jeans - ₹2,399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875013167-18.jpg" alt="Jeans 10">
+                    <h3>Light Wash Slim Straight Jeans</h3>
+                    <p>Casual light wash slim straight jeans for a comfortable and stylish fit.</p>
+                    <div class="price">₹1,999</div>
+                    <button class="add-to-cart-btn" data-item="Light Wash Slim Straight Jeans - ₹1,999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875203032-18.jpg" alt="Jeans 11">
+                    <h3>Black High-Waisted Jeans</h3>
+                    <p>Trendy black high-waisted jeans for a flattering and fashionable look.</p>
+                    <div class="price">₹2,199</div>
+                    <button class="add-to-cart-btn" data-item="Black High-Waisted Jeans - ₹2,199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875011613-18.jpg" alt="Jeans 12">
+                    <h3>Grey Jogger Jeans</h3>
+                    <p>Comfortable and stylish grey jogger jeans with a relaxed fit.</p>
+                    <div class="price">₹1,849</div>
+                    <button class="add-to-cart-btn" data-item="Grey Jogger Jeans - ₹1,849">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875219361-18.jpg" alt="Jeans 13">
+                    <h3>White Boyfriend Jeans</h3>
+                    <p>Chic white boyfriend jeans for a casual and effortless style.</p>
+                    <div class="price">₹2,299</div>
+                    <button class="add-to-cart-btn" data-item="White Boyfriend Jeans - ₹2,299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875202936-18.jpg" alt="Jeans 14">
+                    <h3>Dark Wash Flare Jeans</h3>
+                    <p>Trendy dark wash flare jeans for a retro and stylish look.</p>
+                    <div class="price">₹2,099</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Flare Jeans - ₹2,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875192541-18.jpg" alt="Jeans 15">
+                    <h3>Light Wash Mom Jeans</h3>
+                    <p>Comfortable light wash mom jeans with a relaxed fit and tapered leg.</p>
+                    <div class="price">₹1,799</div>
+                    <button class="add-to-cart-btn" data-item="Light Wash Mom Jeans - ₹1,799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875228493-18.jpg" alt="Jeans 16">
+                    <h3>Black Distressed Skinny Jeans</h3>
+                    <p>Edgy black distressed skinny jeans for a rock-chic and trendy look.</p>
+                    <div class="price">₹1,949</div>
+                    <button class="add-to-cart-btn" data-item="Black Distressed Skinny Jeans - ₹1,949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875013587-18.jpg" alt="Jeans 17">
+                    <h3>Blue Ripped Boyfriend Jeans</h3>
+                    <p>Casual blue ripped boyfriend jeans for a relaxed and stylish vibe.</p>
+                    <div class="price">₹1,899</div>
+                    <button class="add-to-cart-btn" data-item="Blue Ripped Boyfriend Jeans - ₹1,899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875191964-18.jpg" alt="Jeans 18">
+                    <h3>Dark Wash Straight Leg Jeans</h3>
+                    <p>Classic dark wash straight leg jeans. A versatile choice for any occasion.</p>
+                    <div class="price">₹2,199</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Straight Leg Jeans - ₹2,199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875213154-18.jpg" alt="Jeans 19">
+                    <h3>Grey Slim Fit Jeans</h3>
+                    <p>Stylish grey slim fit jeans for a modern and sleek look.</p>
+                    <div class="price">₹1,999</div>
+                    <button class="add-to-cart-btn" data-item="Grey Slim Fit Jeans - ₹1,999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875223092-18.jpg" alt="Jeans 20">
+                    <h3>Black Bootcut Jeans</h3>
+                    <p>Classic black bootcut jeans. Perfect for pairing with boots or heels.</p>
+                    <div class="price">₹2,299</div>
+                    <button class="add-to-cart-btn" data-item="Black Bootcut Jeans - ₹2,299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875183730-18.jpg" alt="Jeans 21">
+                    <h3>Light Wash Cropped Jeans</h3>
+                    <p>Trendy light wash cropped jeans for a casual and stylish look.</p>
+                    <div class="price">₹1,749</div>
+                    <button class="add-to-cart-btn" data-item="Light Wash Cropped Jeans - ₹1,749">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875202530-18.jpg" alt="Jeans 22">
+                    <h3>Dark Wash Skinny Jeans</h3>
+                    <p>Classic dark wash skinny jeans. A versatile choice for any occasion.</p>
+                    <div class="price">₹2,099</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Skinny Jeans - ₹2,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875216698-18.jpg" alt="Jeans 23">
+                    <h3>Grey Ripped Skinny Jeans</h3>
+                    <p>Edgy grey ripped skinny jeans for a trendy and stylish look.</p>
+                    <div class="price">₹1,899</div>
+                    <button class="add-to-cart-btn" data-item="Grey Ripped Skinny Jeans - ₹1,899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875379720-18.jpg" alt="Jeans 24">
+                    <h3>Blue High-Waisted Wide Leg Jeans</h3>
+                    <p>Trendy blue high-waisted wide leg jeans for a fashionable and comfortable style.</p>
+                    <div class="price">₹2,399</div>
+                    <button class="add-to-cart-btn" data-item="Blue High-Waisted Wide Leg Jeans - ₹2,399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875221579-18.jpg" alt="Jeans 25">
+                    <h3>Black Cropped Jeans</h3>
+                    <p>Chic black cropped jeans. Perfect for showing off your shoes.</p>
+                    <div class="price">₹1,949</div>
+                    <button class="add-to-cart-btn" data-item="Black Cropped Jeans - ₹1,949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875221456-18.jpg" alt="Jeans 26">
+                    <h3>Grey Bootcut Jeans</h3>
+                    <p>Classic grey bootcut jeans. A versatile choice for any wardrobe.</p>
+                    <div class="price">₹2,149</div>
+                    <button class="add-to-cart-btn" data-item="Grey Bootcut Jeans - ₹2,149">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875224563-18.jpg" alt="Jeans 27">
+                    <h3>Blue Distressed Boyfriend Jeans</h3>
+                    <p>Casual blue distressed boyfriend jeans for a relaxed and stylish vibe.</p>
+                    <div class="price">₹1,899</div>
+                    <button class="add-to-cart-btn" data-item="Blue Distressed Boyfriend Jeans - ₹1,899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875224938-18.jpg" alt="Jeans 28">
+                    <h3>Black High-Waisted Skinny Jeans</h3>
+                    <p>Trendy black high-waisted skinny jeans for a flattering and stylish look.</p>
+                    <div class="price">₹2,249</div>
+                    <button class="add-to-cart-btn" data-item="Black High-Waisted Skinny Jeans - ₹2,249">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875224174-18.jpg" alt="Jeans 29">
+                    <h3>Light Wash Straight Leg Jeans</h3>
+                    <p>Casual light wash straight leg jeans for a comfortable and classic style.</p>
+                    <div class="price">₹1,799</div>
+                    <button class="add-to-cart-btn" data-item="Light Wash Straight Leg Jeans - ₹1,799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875202530-18.jpg" alt="Jeans 30">
+                    <h3>Dark Wash Skinny Jeans</h3>
+                    <p>Classic dark wash skinny jeans. A versatile choice for any occasion.</p>
+                    <div class="price">₹2,099</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Skinny Jeans - ₹2,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875228998-18.jpg" alt="Jeans 31">
+                    <h3>Grey Distressed Straight Leg Jeans</h3>
+                    <p>Edgy grey distressed straight leg jeans for a trendy and stylish look.</p>
+                    <div class="price">₹1,949</div>
+                    <button class="add-to-cart-btn" data-item="Grey Distressed Straight Leg Jeans - ₹1,949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875017301-18.jpg" alt="Jeans 32">
+                    <h3>Blue Slim Fit Jeans</h3>
+                    <p>Stylish slim fit jeans in a classic blue wash. Comfortable and perfect for everyday wear.</p>
+                    <div class="price">₹1,999</div>
+                    <button class="add-to-cart-btn" data-item="Blue Slim Fit Jeans - ₹1,999">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875011569-18.jpg" alt="Jeans 33">
+                    <h3>Black Skinny Jeans</h3>
+                    <p>Trendy black skinny jeans. A wardrobe essential for a sleek and modern look.</p>
+                    <div class="price">₹2,299</div>
+                    <button class="add-to-cart-btn" data-item="Black Skinny Jeans - ₹2,299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875202486-18.jpg" alt="Jeans 34">
+                    <h3>Light Wash Boyfriend Jeans</h3>
+                    <p>Casual light wash boyfriend jeans for a relaxed and comfortable fit.</p>
+                    <div class="price">₹1,799</div>
+                    <button class="add-to-cart-btn" data-item="Light Wash Boyfriend Jeans - ₹1,799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875013525-18.jpg" alt="Jeans 35">
+                    <h3>Dark Wash Straight Leg Jeans</h3>
+                    <p>Classic dark wash straight leg jeans. A versatile choice for any occasion.</p>
+                    <div class="price">₹2,199</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Straight Leg Jeans - ₹2,199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875216209-18.jpg" alt="Jeans 36">
+                    <h3>Grey Distressed Jeans</h3>
+                    <p>Edgy grey distressed jeans for a trendy and stylish look.</p>
+                    <div class="price">₹1,949</div>
+                    <button class="add-to-cart-btn" data-item="Grey Distressed Jeans - ₹1,949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875205883-18.jpg" alt="Jeans 37">
+                    <h3>White Wide Leg Jeans</h3>
+                    <p>Chic white wide leg jeans for a fashionable and elegant style.</p>
+                    <div class="price">₹2,499</div>
+                    <button class="add-to-cart-btn" data-item="White Wide Leg Jeans - ₹2,499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875015376-18.jpg" alt="Jeans 38">
+                    <h3>Olive Green Cargo Jeans</h3>
+                    <p>Functional and stylish olive green cargo jeans with multiple pockets.</p>
+                    <div class="price">₹2,099</div>
+                    <button class="add-to-cart-btn" data-item="Olive Green Cargo Jeans - ₹2,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875217169-18.jpg" alt="Jeans 39">
+                    <h3>Ripped Black Jeans</h3>
+                    <p>Bold ripped black jeans for a rock-chic and rebellious vibe.</p>
+                    <div class="price">₹1,899</div>
+                    <button class="add-to-cart-btn" data-item="Ripped Black Jeans - ₹1,899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875212157-18.jpg" alt="Jeans 40">
+                    <h3>Dark Wash Bootcut Jeans</h3>
+                    <p>Classic dark wash bootcut jeans. Perfect for pairing with boots.</p>
+                    <div class="price">₹2,399</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Bootcut Jeans - ₹2,399">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875194231-18.jpg" alt="Jeans 41">
+                    <h3>Light Wash Slim Straight Jeans</h3>
+                    <p>Casual light wash slim straight jeans for a comfortable and stylish fit.</p>
+                    <div class="price">₹1,999</div>
+                    <button class="add-to-cart-btn" data-item="Light Wash Slim Straight Jeans - ₹1,999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875226024-18.jpg" alt="Jeans 42">
+                    <h3>Black High-Waisted Jeans</h3>
+                    <p>Trendy black high-waisted jeans for a flattering and fashionable look.</p>
+                    <div class="price">₹2,199</div>
+                    <button class="add-to-cart-btn" data-item="Black High-Waisted Jeans - ₹2,199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875195702-18.jpg" alt="Jeans 43">
+                    <h3>Grey Jogger Jeans</h3>
+                    <p>Comfortable and stylish grey jogger jeans with a relaxed fit.</p>
+                    <div class="price">₹1,849</div>
+                    <button class="add-to-cart-btn" data-item="Grey Jogger Jeans - ₹1,849">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875205821-18.jpg" alt="Jeans 44">
+                    <h3>White Boyfriend Jeans</h3>
+                    <p>Chic white boyfriend jeans for a casual and effortless style.</p>
+                    <div class="price">₹2,299</div>
+                    <button class="add-to-cart-btn" data-item="White Boyfriend Jeans - ₹2,299">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875212751-18.jpg" alt="Jeans 45">
+                    <h3>Dark Wash Flare Jeans</h3>
+                    <p>Trendy dark wash flare jeans for a retro and stylish look.</p>
+                    <div class="price">₹2,099</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Flare Jeans - ₹2,099">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875014669-18.jpg" alt="Jeans 46">
+                    <h3>Light Wash Mom Jeans</h3>
+                    <p>Comfortable light wash mom jeans with a relaxed fit and tapered leg.</p>
+                    <div class="price">₹1,799</div>
+                    <button class="add-to-cart-btn" data-item="Light Wash Mom Jeans - ₹1,799">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875195283-18.jpg" alt="Jeans 47">
+                    <h3>Black Distressed Skinny Jeans</h3>
+                    <p>Edgy black distressed skinny jeans for a rock-chic and trendy look.</p>
+                    <div class="price">₹1,949</div>
+                    <button class="add-to-cart-btn" data-item="Black Distressed Skinny Jeans - ₹1,949">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875192015-18.jpg" alt="Jeans 48">
+                    <h3>Blue Ripped Boyfriend Jeans</h3>
+                    <p>Casual blue ripped boyfriend jeans for a relaxed and stylish vibe.</p>
+                    <div class="price">₹1,899</div>
+                    <button class="add-to-cart-btn" data-item="Blue Ripped Boyfriend Jeans - ₹1,899">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875195221-18.jpg" alt="Jeans 49">
+                    <h3>Dark Wash Straight Leg Jeans</h3>
+                    <p>Classic dark wash straight leg jeans. A versatile choice for any occasion.</p>
+                    <div class="price">₹2,199</div>
+                    <button class="add-to-cart-btn" data-item="Dark Wash Straight Leg Jeans - ₹2,199">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://d1pdzcnm6xgxlz.cloudfront.net/bottoms/8905875194866-18.jpg" alt="Jeans 50">
+                    <h3>Grey Slim Fit Jeans</h3>
+                    <p>Stylish grey slim fit jeans for a modern and sleek look.</p>
+                    <div class="price">₹1,999</div>
+                    <button class="add-to-cart-btn" data-item="Grey Slim Fit Jeans - ₹1,999">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+           
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        document.querySelectorAll(".add-to-cart-btn").forEach((button, index) => {
+            button.addEventListener("click", function () {
+                let productBox = button.closest(".product-box");
+                let productName = productBox.querySelector("h3").textContent;
+                let productPrice = productBox.querySelector(".price").textContent;
+                let productImage = productBox.querySelector("img").src;
+
+                let product = { name: productName, price: productPrice, image: productImage };
+                cart.push(product);
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                // Redirect to cart page
+                window.location.href = "cart.html";
+            });
+        });
+    });
+</script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

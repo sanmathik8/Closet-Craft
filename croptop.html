@@ -1,0 +1,929 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehenga Collection</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts (Poppins for better style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #5e3370;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .product-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-box h3 {
+            font-size: 24px;
+            color: #5e3370;
+            margin-bottom: 15px;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-box .price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #5e3370;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #8e44ad;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+    <div class="container">
+        <h2> Collection</h2>
+        <div class="product-container">
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241231/EYA0/6773484bc148fa1b306af996/-473Wx593H-700994712-purple-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 1</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 1">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241231/TJKD/67734841c148fa1b306af894/-473Wx593H-700994702-green-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 2</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 2">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240822/ckS5/66c6dc5d6f60443f311e0876/-473Wx593H-443046556-ltpink-MODEL3.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 3</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 3">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240131/vKta/65b9a36a8cdf1e0df5da88d4/-473Wx593H-467023431-black-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 4</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 4">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240131/iMw2/65b9a33a16fd2c6e6acbfcb2/-473Wx593H-467023431-green-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 5</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 5">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240131/OwpI/65b9a2a18cdf1e0df5da786a/-473Wx593H-467023431-pink-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 6</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 6">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240201/ju0F/65baf1418cdf1e0df5dd4d5a/-473Wx593H-467023431-blue-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 7</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 7">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20250204/yyf3/67a119d32960820c4958c152/-473Wx593H-467023431-lavender-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 8</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 8">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241114/YyXC/6735bc9f260f9c41e8e0920b/-473Wx593H-700749670-maroon-MODEL2.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 9</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 9">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241005/JKkj/67006c6d260f9c41e8578b75/-473Wx593H-442660242-offwhite-MODEL2.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 10</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 10">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241202/h8Ot/674dd0aec148fa1b30069460/-473Wx593H-700849835-cream-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 11</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 11">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240112/93mt/65a0e9bc54c30e6276a5db1d/-473Wx593H-466551228-white-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 12</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 12">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241229/7QJL/6771680ec148fa1b3066f847/-473Wx593H-700993396-black-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 13</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 13">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240809/1CkT/66b5aa5d6f60443f31fa5bdc/-473Wx593H-443046816-blue-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 14</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 14">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20250118/AQIg/678b0677663dbe1c5fe225d7/-473Wx593H-442697008-pink-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 15</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 15">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240808/bf0l/66b492266f60443f31f6ba33/-473Wx593H-443046544-olive-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 16</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 16">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240816/gUi6/66bf7cf76f60443f310fe59c/-473Wx593H-700294001-black-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 17</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 17">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240918/EgVW/66eaa5c2260f9c41e80f6ad1/-473Wx593H-700268770-green-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 18</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 18">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240709/oX5P/668cf5a46f60443f31b68c0a/-473Wx593H-443047053-white-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 19</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 19">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240918/uYg0/66ea74d7260f9c41e80f4310/-473Wx593H-443049051-white-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 20</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 20">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240620/OsiN/667456871d763220fae086d7/-473Wx593H-442600859-black-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 21</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 21">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240806/mnd7/66b2122c1d763220fa61e332/-473Wx593H-443046827-offwhite-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 22</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 22">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240523/d5On/664f1c3005ac7d77bb727031/-473Wx593H-442596624-white-MODEL2.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 23</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 23">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240212/1tH4/65ca467b16fd2c6e6af1dcb9/-473Wx593H-467065560-black-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 24</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 24">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240619/m8s1/66725fd81d763220facb0963/-473Wx593H-443046485-offwhite-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 25</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 25">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230515/43ze/6462782842f9e729d788a098/-473Wx593H-466153026-black-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 26</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 26">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240728/sIdb/66a56af76f60443f31cbe2d8/-473Wx593H-464094330-brown-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 27</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 27">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240712/oyyv/66914fcb1d763220fa72ca37/-473Wx593H-443046543-jetblack-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 28</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 28">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240509/r5x4/663c9a1416fd2c6e6af60c1f/-473Wx593H-442584201-blue-MODEL2.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 29</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 29">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230812/DUmM/64d772e8a9b42d15c9a8f929/-473Wx593H-469413397-blue-MODEL4.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 30</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 30">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240926/dlEL/66f55f1f260f9c41e82d7a2c/-473Wx593H-443050825-jetblack-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 31</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 31">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240628/61C8/667ecbad6f60443f31f2f7e8/-473Wx593H-442596642-blue-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 32</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 32">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240620/thsI/667451b06f60443f31651f90/-473Wx593H-442596642-black-MODEL2.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 33</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 33">Add to Cart</button>
+                </div>
+            </div>
+          
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241204/VtSe/674f8549c148fa1b3012321f/-473Wx593H-700872403-pink-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 45</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 45">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241204/RLqL/674f8591c148fa1b30123aad/-473Wx593H-700872403-white-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 46</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 46">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20241204/2lsT/674f85a60f47f80c87d2afed/-473Wx593H-700872403-lavender-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 47</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 47">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240607/RMMC/6663123a16fd2c6e6a5a1186/-473Wx593H-443045055-pink-MODEL2.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 48</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 48">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20231004/kRna/651c78b1afa4cf41f51fa184/-473Wx593H-466660076-  -MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 49</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 49">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20240822/hJ9y/66c6dc586f60443f311e0837/-473Wx593H-443048892-red-MODEL.jpg" alt="Crop Top">
+                    <h3>Crop Top</h3>
+                    <p>A stylish and trendy crop top.</p>
+                    <div class="price">₹Price 50</div>
+                    <button class="add-to-cart-btn" data-item="Crop Top - ₹Price 50">Add to Cart</button>
+                </div>
+            </div></div> -->
+            <body>
+                <div class="container">
+                    <h2>Collection</h2>
+                    <div class="product-container">
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241231/EYA0/6773484bc148fa1b306af996/-473Wx593H-700994712-purple-MODEL.jpg" alt="Purple Crop Top">
+                                <h3>Purple Crop Top</h3>
+                                <p>A stylish and trendy purple crop top perfect for summer outings.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Purple Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241231/TJKD/67734841c148fa1b306af894/-473Wx593H-700994702-green-MODEL.jpg" alt="Green Crop Top">
+                                <h3>Green Crop Top</h3>
+                                <p>A vibrant green crop top that adds a pop of color to your wardrobe.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Green Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240822/ckS5/66c6dc5d6f60443f311e0876/-473Wx593H-443046556-ltpink-MODEL3.jpg" alt="Light Pink Crop Top">
+                                <h3>Light Pink Crop Top</h3>
+                                <p>A soft light pink crop top that is perfect for casual wear.</p>
+                                <div class="price">₹799</div>
+                                <button class="add-to-cart-btn" data-item="Light Pink Crop Top - ₹799">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240131/vKta/65b9a36a8cdf1e0df5da88d4/-473Wx593H-467023431-black-MODEL.jpg" alt="Black Crop Top">
+                                <h3>Black Crop Top</h3>
+                                <p>A classic black crop top that goes with everything.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240131/iMw2/65b9a33a16fd2c6e6acbfcb2/-473Wx593H-467023431-green-MODEL.jpg" alt="Dark Green Crop Top">
+                                <h3>Dark Green Crop Top</h3>
+                                <p>A trendy dark green crop top for a chic look.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Dark Green Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240131/OwpI/65b9a2a18cdf1e0df5da786a/-473Wx593H-467023431-pink-MODEL.jpg" alt="Pink Crop Top">
+                                <h3>Pink Crop Top</h3>
+                                <p>A cute pink crop top that is perfect for a day out.</p>
+                                <div class="price">₹799</div>
+                                <button class="add-to-cart-btn" data-item="Pink Crop Top - ₹799">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240201/ju0F/65baf1418cdf1e0df5dd4d5a/-473Wx593H-467023431-blue-MODEL.jpg" alt="Blue Crop Top">
+                                <h3>Blue Crop Top</h3>
+                                <p>A stylish blue crop top that adds flair to your outfit.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Blue Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20250204/yyf3/67a119d32960820c4958c152/-473Wx593H-467023431-lavender-MODEL.jpg" alt="Lavender Crop Top">
+                                <h3>Lavender Crop Top</h3>
+                                <p>A lovely lavender crop top for a soft and feminine look.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Lavender Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241114/YyXC/6735bc9f260f9c41e8e0920b/-473Wx593H-700749670-maroon-MODEL2.jpg" alt="Maroon Crop Top">
+                                <h3>Maroon Crop Top</h3>
+                                <p>A rich maroon crop top that is perfect for evening outings.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Maroon Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241005/JKkj/67006c6d260f9c41e8578b75/-473Wx593H-442660242-offwhite-MODEL2.jpg" alt="Offwhite Crop Top">
+                                <h3>Offwhite Crop Top</h3>
+                                <p>An elegant offwhite crop top that pairs well with any bottom.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Offwhite Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241202/h8Ot/674dd0aec148fa1b30069460/-473Wx593H-700849835-cream-MODEL.jpg" alt="Cream Crop Top">
+                                <h3>Cream Crop Top</h3>
+                                <p>A soft cream crop top that is perfect for layering.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Cream Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240112/93mt/65a0e9bc54c30e6276a5db1d/-473Wx593H-466551228-white-MODEL.jpg" alt="White Crop Top">
+                                <h3>White Crop Top</h3>
+                                <p>A classic white crop top that is a wardrobe essential.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="White Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241229/7QJL/6771680ec148fa1b3066f847/-473Wx593H-700993396-black-MODEL.jpg" alt="Black Crop Top">
+                                <h3>Black Crop Top</h3>
+                                <p>A stylish black crop top that is perfect for any occasion.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240809/1CkT/66b5aa5d6f60443f31fa5bdc/-473Wx593H-443046816-blue-MODEL.jpg" alt="Blue Crop Top">
+                                <h3>Blue Crop Top</h3>
+                                <p>A trendy blue crop top that is perfect for casual outings.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Blue Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20250118/AQIg/678b0677663dbe1c5fe225d7/-473Wx593H-442697008-pink-MODEL.jpg" alt="Pink Crop Top">
+                                <h3>Pink Crop Top</h3>
+                                <p>A cute pink crop top that is perfect for a day out.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Pink Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240808/bf0l/66b492266f60443f31f6ba33/-473Wx593H-443046544-olive-MODEL.jpg" alt="Olive Crop Top">
+                                <h3>Olive Crop Top</h3>
+                                <p>A stylish olive crop top that adds a unique touch to your outfit.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Olive Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240816/gUi6/66bf7cf76f60443f310fe59c/-473Wx593H-700294001-black-MODEL.jpg" alt="Black Crop Top">
+                                <h3>Black Crop Top</h3>
+                                <p>A chic black crop top that is perfect for a night out.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240918/EgVW/66eaa5c2260f9c41e80f6ad1/-473Wx593H-700268770-green-MODEL.jpg" alt="Green Crop Top">
+                                <h3>Green Crop Top</h3>
+                                <p>A vibrant green crop top that is perfect for summer.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Green Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240709/oX5P/668cf5a46f60443f31b68c0a/-473Wx593H-443047053-white-MODEL.jpg" alt="White Crop Top">
+                                <h3>White Crop Top</h3>
+                                <p>A classic white crop top that is a wardrobe essential.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="White Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240918/uYg0/66ea74d7260f9c41e80f4310/-473Wx593H-443049051-white-MODEL.jpg" alt="White Crop Top">
+                                <h3>White Crop Top</h3>
+                                <p>A stylish white crop top that is perfect for layering.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="White Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240620/OsiN/667456871d763220fae086d7/-473Wx593H-442600859-black-MODEL.jpg" alt="Black Crop Top">
+                                <h3>Black Crop Top</h3>
+                                <p>A stylish black crop top that is perfect for any occasion.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240806/mnd7/66b2122c1d763220fa61e332/-473Wx593H-443046827-offwhite-MODEL.jpg" alt="Offwhite Crop Top">
+                                <h3>Offwhite Crop Top</h3>
+                                <p>A chic offwhite crop top that pairs well with any outfit.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Offwhite Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240523/d5On/664f1c3005ac7d77bb727031/-473Wx593H-442596624-white-MODEL2.jpg" alt="White Crop Top">
+                                <h3>White Crop Top</h3>
+                                <p>A stylish white crop top that is perfect for any occasion.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="White Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240212/1tH4/65ca467b16fd2c6e6af1dcb9/-473Wx593H-467065560-black-MODEL.jpg" alt="Black Crop Top">
+                                <h3>Black Crop Top</h3>
+                                <p>A trendy black crop top that is perfect for a night out.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240619/m8s1/66725fd81d763220facb0963/-473Wx593H-443046485-offwhite-MODEL.jpg" alt="Offwhite Crop Top">
+                                <h3>Offwhite Crop Top</h3>
+                                <p>A stylish offwhite crop top that is perfect for layering.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Offwhite Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20230515/43ze/6462782842f9e729d788a098/-473Wx593H-466153026-black-MODEL.jpg" alt="Black Crop Top">
+                                <h3>Black Crop Top</h3>
+                                <p>A stylish black crop top that is perfect for any occasion.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240728/sIdb/66a56af76f60443f31cbe2d8/-473Wx593H-464094330-brown-MODEL.jpg" alt="Brown Crop Top">
+                                <h3>Brown Crop Top</h3>
+                                <p>A trendy brown crop top that adds a unique touch to your outfit.</p>
+                                <div class="price">₹899</div>
+                                <button class="add-to-cart-btn" data-item="Brown Crop Top - ₹899">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240712/oyyv/66914fcb1d763220fa72ca37/-473Wx593H-443046543-jetblack-MODEL.jpg" alt="Jet Black Crop Top">
+                                <h3>Jet Black Crop Top</h3>
+                                <p>A chic jet black crop top that is perfect for a night out.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Jet Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240509/r5x4/663c9a1416fd2c6e6af60c1f/-473Wx593H-442584201-blue-MODEL2.jpg" alt="Blue Crop Top">
+                                <h3>Blue Crop Top</h3>
+                                <p>A stylish blue crop top that is perfect for casual outings.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Blue Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20230812/DUmM/64d772e8a9b42d15c9a8f929/-473Wx593H-469413397-blue-MODEL4.jpg" alt="Blue Crop Top">
+                                <h3>Blue Crop Top</h3>
+                                <p>A stylish blue crop top that is perfect for summer.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Blue Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240926/dlEL/66f55f1f260f9c41e82d7a2c/-473Wx593H-443050825-jetblack-MODEL.jpg" alt="Jet Black Crop Top">
+                                <h3>Jet Black Crop Top</h3>
+                                <p>A chic jet black crop top that is perfect for a night out.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Jet Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240628/61C8/667ecbad6f60443f31f2f7e8/-473Wx593H-442596642-blue-MODEL.jpg" alt="Blue Crop Top">
+                                <h3>Blue Crop Top</h3>
+                                <p>A stylish blue crop top that is perfect for casual outings.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Blue Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240620/thsI/667451b06f60443f31651f90/-473Wx593H-442596642-black-MODEL2.jpg" alt="Black Crop Top">
+                                <h3>Black Crop Top</h3>
+                                <p>A stylish black crop top that is perfect for any occasion.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Black Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                      
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241204/VtSe/674f8549c148fa1b3012321f/-473Wx593H-700872403-pink-MODEL.jpg" alt="Pink Crop Top">
+                                <h3>Pink Crop Top</h3>
+                                <p>A stylish pink crop top that is perfect for summer.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Pink Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241204/RLqL/674f8591c148fa1b30123aad/-473Wx593H-700872403-white-MODEL.jpg" alt="White Crop Top">
+                                <h3>White Crop Top</h3>
+                                <p>A classic white crop top that is a wardrobe essential.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="White Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20241204/2lsT/674f85a60f47f80c87d2afed/-473Wx593H-700872403-lavender-MODEL.jpg" alt="Lavender Crop Top">
+                                <h3>Lavender Crop Top</h3>
+                                <p>A stylish lavender crop top that adds a unique touch to your outfit.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Lavender Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240607/RMMC/6663123a16fd2c6e6a5a1186/-473Wx593H-443045055-pink-MODEL2.jpg" alt="Pink Crop Top">
+                                <h3>Pink Crop Top</h3>
+                                <p>A cute pink crop top that is perfect for a day out.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Pink Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20231004/kRna/651c78b1afa4cf41f51fa184/-473Wx593H-466660076-  -MODEL.jpg" alt="Crop Top">
+                                <h3>Crop Top</h3>
+                                <p>A stylish and trendy crop top for any occasion.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-box">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20240822/hJ9y/66c6dc586f60443f311e0837/-473Wx593H-443048892-red-MODEL.jpg" alt="Red Crop Top">
+                                <h3>Red Crop Top</h3>
+                                <p>A bold red crop top that makes a statement.</p>
+                                <div class="price">₹999</div>
+                                <button class="add-to-cart-btn" data-item="Red Crop Top - ₹999">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        document.querySelectorAll(".add-to-cart-btn").forEach((button, index) => {
+            button.addEventListener("click", function () {
+                let productBox = button.closest(".product-box");
+                let productName = productBox.querySelector("h3").textContent;
+                let productPrice = productBox.querySelector(".price").textContent;
+                let productImage = productBox.querySelector("img").src;
+
+                let product = { name: productName, price: productPrice, image: productImage };
+                cart.push(product);
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                // Redirect to cart page
+                window.location.href = "cart.html";
+            });
+        });
+    });
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

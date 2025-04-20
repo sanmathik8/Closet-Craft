@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - ClosetCraft</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8e2ff, #d5a3ff);
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            margin-top: 40px;
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #5e3370;
+            font-weight: bold;
+        }
+        .payment-box {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .qr-code {
+            width: 200px;
+            margin: 20px auto;
+            display: block;
+        }
+        .custom-btn {
+            background-color: #5e3370;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .custom-btn:hover {
+            background-color: #8e44ad;
+        }
+        .upload-section {
+            margin-top: 15px;
+        }
+        .hidden {
+            display: none;
+        }
+        .order-summary {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .order-summary h4 {
+            margin-bottom: 10px;
+        }
+        .order-summary p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Complete Your Payment</h2>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h4>Order Summary</h4>
+            <div id="order-items"></div>
+            <p><strong>Total: ₹<span id="total-price">0</span></strong></p>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-box">
+            <h4>Scan the QR Code to Pay</h4>
+            <img src="qr.jpg" alt="QR Code" class="qr-code">
+            <button class="custom-btn" onclick="confirmPayment()">I Have Paid</button>
+        </div>
+
+        <!-- Upload Proof Section -->
+        <div class="upload-section hidden" id="upload-section">
+            <h5>Upload Payment Proof</h5>
+            <input type="file" id="payment-proof" accept="image/*, application/pdf">
+            <button class="custom-btn" onclick="uploadProof()">Upload</button>
+        </div>
+
+        <!-- Download Invoice Button (Initially Hidden) -->
+        <button class="custom-btn hidden" id="download-btn" onclick="downloadInvoice()">Download Invoice</button>
+    </div>
+
+<script>
+    let cart = [];
+    let deliveryDetails = {};
+
+    document.addEventListener("DOMContentLoaded", function () {
+        cart = JSON.parse(localStorage.getItem("cart")) || [];
+        deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails")) || {};
+
+        function displayOrderSummary() {
+            let orderItemsContainer = document.getElementById("order-items");
+            let totalPriceElement = document.getElementById("total-price");
+            orderItemsContainer.innerHTML = "";
+
+            if (cart.length === 0) {
+                orderItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+
+            let totalPrice = 0;
+            cart.forEach((item) => {
+                let itemElement = document.createElement("p");
+                itemElement.innerHTML = `${item.name} - ₹${item.price}`;
+                orderItemsContainer.appendChild(itemElement);
+                totalPrice += parseFloat(item.price.replace(/[₹,]/g, "")) || 0;
+            });
+
+            totalPriceElement.innerText = totalPrice.toFixed(2);
+        }
+
+        displayOrderSummary();
+
+        window.confirmPayment = function () {
+            alert("Payment Confirmed! Please upload your payment proof.");
+            document.getElementById("upload-section").classList.remove("hidden");
+        };
+
+        window.uploadProof = function () {
+            let proofFile = document.getElementById("payment-proof").files[0];
+            if (!proofFile) {
+                alert("Please select a file before uploading.");
+                return;
+            }
+            alert("Payment Proof Uploaded Successfully!");
+            document.getElementById("download-btn").classList.remove("hidden");
+        };
+
+        window.downloadInvoice = function () {
+            const { jsPDF } = window.jspdf;
+            let doc = new jsPDF();
+
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(22);
+            doc.setTextColor(94, 51, 112);
+            doc.text("ClosetCraft", 75, 15);
+
+            doc.setFontSize(16);
+            doc.setTextColor(0, 0, 0);
+            doc.text("Order Invoice", 85, 30);
+
+            doc.setFontSize(12);
+            doc.setFont("helvetica", "bold");
+            doc.text("Customer Details:", 20, 45);
+            doc.setFont("helvetica", "normal");
+            doc.text(`Name: ${deliveryDetails.name || "N/A"}`, 20, 55);
+            doc.text(`Phone: ${deliveryDetails.phone || "N/A"}`, 20, 65);
+            doc.text(`Address: ${deliveryDetails.address || "N/A"}`, 20, 75);
+
+            doc.setFont("helvetica", "bold");
+            doc.text("Order Summary:", 20, 90);
+
+            doc.text("Item", 20, 100);
+            doc.text("Price", 150, 100);
+
+            let y = 110;
+            let totalPrice = 0;
+
+            doc.setFont("helvetica", "normal");
+            cart.forEach((item, index) => {
+                doc.text(`${index + 1}. ${item.name}`, 20, y);
+                doc.text(`₹${item.price}`, 150, y);
+                totalPrice += parseFloat(item.price.replace(/[₹,]/g, "")) || 0;
+                y += 10;
+            });
+
+            doc.setFont("helvetica", "bold");
+            doc.text(`Total Amount Paid: ₹${totalPrice.toFixed(2)}`, 20, y + 10);
+            doc.text("Payment Status: Paid via QR Code", 20, y + 20);
+
+            doc.save("ClosetCraft_Invoice.pdf");
+        };
+    });
+</script>
+
+</body>
+</html>
