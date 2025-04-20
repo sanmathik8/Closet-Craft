@@ -1,0 +1,15 @@
+.navbar-nav .nav-item .nav-link {
+    color: #000;
+    background-color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus,
+.navbar-nav .nav-item .nav-link:active {
+    color: darkpink !important;
+    border-bottom: 2px solid darkpink;
+}
+
+.dropdown-menu {
+    background-color: #fff;
+}

@@ -1,0 +1,924 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehenga Collection</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts (Poppins for better style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #5e3370;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .product-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-box h3 {
+            font-size: 24px;
+            color: #5e3370;
+            margin-bottom: 15px;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-box .price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #5e3370;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #8e44ad;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2> Collection</h2>
+        <div class="product-container">
+<!-- 
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/24/3e/243e7d0df1035f1444365c2403b901387ff22b45.jpg?imwidth=384" alt="Coat 1">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 1</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 1">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/ae/63/ae630ab27a27c4a256015d49a082dc2b07324e41.jpg?imwidth=384" alt="Coat 2">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 2</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 2">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/68/50/685004f106db8bdc11f19737e2eabbb0235e97b9.jpg?imwidth=384" alt="Coat 3">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 3</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 3">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/bc/3c/bc3cbe6545a046a537358442b7df2d041a204103.jpg?imwidth=384" alt="Coat 4">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 4</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 4">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/9b/95/9b9529426e62b1b41d7dbd73be279e5b40e61960.jpg?imwidth=384" alt="Coat 5">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 5</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 5">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/16/0c/160cfdf905408db8f92fb45f4ea527831dfbfaa8.jpg?imwidth=384" alt="Coat 6">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 6</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 6">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/4f/82/4f82c39550add5e76f6dd09ed55ccb017998d6c8.jpg?imwidth=384" alt="Coat 7">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 7</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 7">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/57/90/5790c476ca46c901ee43ec46a5129f63056ab6cd.jpg?imwidth=384" alt="Coat 8">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 8</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 8">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/fe/f5/fef50ae2bbc2c990af2d06a33736b1c5e40cfd3c.jpg?imwidth=384" alt="Coat 9">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 9</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 9">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/38/e9/38e9048cf886a64103a0fb98e3865fa4facf5814.jpg?imwidth=384" alt="Coat 10">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 10</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 10">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/0a/39/0a39c606061ab50d869e97b066db97b326f4e876.jpg?imwidth=384" alt="Coat 11">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 11</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 11">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/3a/bf/3abfab1613e107e00df289bd3d05ad0ce36aa592.jpg?imwidth=384" alt="Coat 12">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 12</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 12">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/91/1f/911f12a71d4415ce4c87d39b0957cd2781c69803.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 13</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 13">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/b6/ee/b6eea9caee977b2207bdafc446dab931cc738ea4.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 14</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 14">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/9b/47/9b478a53d6467e3b7ac7da172fe03489ca80387e.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 15</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 15">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/c0/4b/c04b5934623bc84e1ca04dd9f39de092469f443c.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 16</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 16">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/28/57/28573658352fedf9d5a64793fae5515e0bf9dfed.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 17</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 17">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/3a/a5/3aa5078e4332b641db618e53a5c550c2a7136b73.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 18</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 18">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/69/b8/69b85cf031a4eb4538cbd685cb4ee155df1a9ebd.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 19</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 19">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/8f/da/8fda8c716669816d2957267bf6322d377dba32d1.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 20</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 20">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/27/0e/270e9fd552488f72c682439f2a0088e5140aa6f4.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 21</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 21">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/bc/98/bc987bf38a4a5e89f8a9057f3d4e1a066042eec4.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 22</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 22">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/3f/92/3f92bf445f3bc6d699bae67b0b944aadbc7ccebb.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 23</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 23">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/78/7a/787a71abfe2d2684ccc3229ac1c01c8941e66599.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 24</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 24">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/31/7b/317b2f5c5261f5aed253f37793c295dd31de383b.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 25</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 25">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/de/e3/dee326ec90556c7fb8acf002ed9e25305e887c9c.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 26</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 26">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/23/e5/23e526afecd9fa490eae3b1ada8376c124ab5fac.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 27</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 27">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/76/5a/765ac940531a8b9b503143cfb0e5ee5d55585a33.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 28</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 28">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/c0/60/c0609500130bcc2f4ebec28f5aba4b0e75129042.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 29</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 29">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/b2/1e/b21e3d00a8154d8e1094c42a0358e704c9694baf.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 30</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 30">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/32/de/32dea9cbb7823efd571d240a4f432c22159f0857.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 31</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 31">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/34/6d/346df0f3e56f6d608c1f60ce05056d52c3760c3e.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 32</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 32">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/ec/e4/ece4543a69fd36f63818506b35ff82f64b35793e.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 33</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 33">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/c6/c9/c6c90d021513ef0708fbc8c75847364236e72f22.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 34</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 34">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/a7/a1/a7a12521567aa3418299f1a3c3795beaaa2df0d3.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 35</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 35">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/d6/5a/d65a7d362719be4a0608b0dba11c6f26ecf1ec9a.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 36</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 36">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/77/43/7743e913ec71502cac698dc21d9f5a8a336bab60.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 37</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 37">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/08/39/0839fe36fdda796b449a0bd273ea4e4430bd5ea0.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 38</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 38">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/1c/06/1c0677f1a5008b97c0f566fa73924b66da603140.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 39</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 39">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/f1/54/f154b9ede9fb57bb0730d81a9481b880c9c9f7e4.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 40</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 40">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/f6/78/f6782cad190f86af1e978ffd5c106151ebd5a3b9.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 41</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 41">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/02/b9/02b99159149f1e20e83f51cbc63ab51120a780af.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 42</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 42">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/c0/69/c0693610cb61a4e4c7b3006ff91e64d18b175568.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 43</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 43">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/3c/04/3c0401c520de3e6711ef435698b4b985ee6a3196.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 44</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 44">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/84/fd/84fd1585ae9a531ed5593ee1697762491efb5080.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 45</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 45">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/cd/24/cd248d78c5a9ae25a07f42795473daf97d7f7b10.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 46</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 46">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/c3/4f/c34ffe43ae9720519dc48db9ef5495a9d204f77a.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 47</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 47">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/51/e8/51e85729c0069fa37bea38605598c9a3f34d583a.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 48</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 48">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/84/f7/84f726f6065a7c507febfe115349c3e87dda1ed2.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 49</div>
+                    <button class="add-to-cart-btn" data-item="Coat - ₹Price 49">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/38/49/3849abcef6c50ff9923e10da15c2c163e13bd34b.jpg?imwidth=384" alt="Coat">
+                    <h3>Coat</h3>
+                    <p>A fashionable and warm coat.</p>
+                    <div class="price">₹Price 50</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>   -->
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/24/3e/243e7d0df1035f1444365c2403b901387ff22b45.jpg?imwidth=384" alt="Classic Wool Coat">
+                    <h3>Classic Wool Coat</h3>
+                    <p>A timeless wool coat that combines elegance and warmth.</p>
+                    <div class="price">₹2999</div>
+                    <button class="add-to-cart-btn" data-item="Classic Wool Coat - ₹2999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/ae/63/ae630ab27a27c4a256015d49a082dc2b07324e41.jpg?imwidth=384" alt="Trench Coat">
+                    <h3>Trench Coat</h3>
+                    <p>A stylish trench coat perfect for rainy days.</p>
+                    <div class="price">₹3499</div>
+                    <button class="add-to-cart-btn" data-item="Trench Coat - ₹3499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/68/50/685004f106db8bdc11f19737e2eabbb0235e97b9.jpg?imwidth=384" alt="Puffer Jacket">
+                    <h3>Puffer Jacket</h3>
+                    <p>A cozy puffer jacket that keeps you warm in winter.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Puffer Jacket - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/bc/3c/bc3cbe6545a046a537358442b7df2d041a204103.jpg?imwidth=384" alt="Denim Jacket">
+                    <h3>Denim Jacket</h3>
+                    <p>A classic denim jacket for a casual look.</p>
+                    <div class="price">₹2499</div>
+                    <button class="add-to-cart-btn" data-item="Denim Jacket - ₹2499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/9b/95/9b9529426e62b1b41d7dbd73be279e5b40e61960.jpg?imwidth=384" alt="Leather Biker Jacket">
+                    <h3>Leather Biker Jacket</h3>
+                    <p>A rugged leather biker jacket for the adventurous spirit.</p>
+                    <div class="price">₹4999</div>
+                    <button class="add-to-cart-btn" data-item="Leather Biker Jacket - ₹4999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/16/0c/160cfdf905408db8f92fb45f4ea527831dfbfaa8.jpg?imwidth=384" alt="Peacoat">
+                    <h3>Peacoat</h3>
+                    <p>A stylish peacoat that adds sophistication to any outfit.</p>
+                    <div class="price">₹3599</div>
+                    <button class="add-to-cart-btn" data-item="Peacoat - ₹3599">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/4f/82/4f82c39550add5e76f6dd09ed55ccb017998d6c8.jpg?imwidth=384" alt="Faux Fur Coat">
+                    <h3>Faux Fur Coat</h3>
+                    <p>A luxurious faux fur coat for a glamorous look.</p>
+                    <div class="price">₹4499</div>
+                    <button class="add-to-cart-btn" data-item="Faux Fur Coat - ₹4499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/57/90/5790c476ca46c901ee43ec46a5129f63056ab6cd.jpg?imwidth=384" alt="Hooded Parka">
+                    <h3>Hooded Parka</h3>
+                    <p>A warm hooded parka ideal for cold weather.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Hooded Parka - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/fe/f5/fef50ae2bbc2c990af2d06a33736b1c5e40cfd3c.jpg?imwidth=384" alt="Double-Breasted Coat">
+                    <h3>Double-Breasted Coat</h3>
+                    <p>A chic double-breasted coat for a polished look.</p>
+                    <div class="price">₹3599</div>
+                    <button class="add-to-cart-btn" data-item="Double-Breasted Coat - ₹3599">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/38/e9/38e9048cf886a64103a0fb98e3865fa4facf5814.jpg?imwidth=384" alt="Casual Blazer">
+                    <h3>Casual Blazer</h3>
+                    <p>A versatile casual blazer for smart-casual occasions.</p>
+                    <div class="price">₹2999</div>
+                    <button class="add-to-cart-btn" data-item="Casual Blazer - ₹2999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/0a/39/0a39c606061ab50d869e97b066db97b326f4e876.jpg?imwidth=384" alt="Quilted Jacket">
+                    <h3>Quilted Jacket</h3>
+                    <p>A lightweight quilted jacket for layering.</p>
+                    <div class="price">₹2499</div>
+                    <button class="add-to-cart-btn" data-item="Quilted Jacket - ₹2499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/3a/bf/3abfab1613e107e00df289bd3d05ad0ce36aa592.jpg?imwidth=384" alt="Longline Coat">
+                    <h3>Longline Coat</h3>
+                    <p>A trendy longline coat for a modern silhouette.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Longline Coat - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/91/1f/911f12a71d4415ce4c87d39b0957cd2781c69803.jpg?imwidth=384" alt="Military Jacket">
+                    <h3>Military Jacket</h3>
+                    <p>A stylish military jacket with a rugged appeal.</p>
+                    <div class="price">₹3499</div>
+                    <button class="add-to-cart-btn" data-item="Military Jacket - ₹3499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/b6/ee/b6eea9caee977b2207bdafc446dab931cc738ea4.jpg?imwidth=384" alt="Cape Coat">
+                    <h3>Cape Coat</h3>
+                    <p>A fashionable cape coat for a unique style.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Cape Coat - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/9b/47/9b478a53d6467e3b7ac7da172fe03489ca80387e.jpg?imwidth=384" alt="Belted Coat">
+                    <h3>Belted Coat</h3>
+                    <p>A belted coat that accentuates your waist.</p>
+                    <div class="price">₹3599</div>
+                    <button class="add-to-cart-btn" data-item="Belted Coat - ₹3599">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/c0/4b/c04b5934623bc84e1ca04dd9f39de092469f443c.jpg?imwidth=384" alt="Oversized Coat">
+                    <h3>Oversized Coat</h3>
+                    <p>An oversized coat for a relaxed and trendy look.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Oversized Coat - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/28/57/28573658352fedf9d5a64793fae5515e0bf9dfed.jpg?imwidth=384" alt="Chesterfield Coat">
+                    <h3>Chesterfield Coat</h3>
+                    <p>A sophisticated Chesterfield coat for formal occasions.</p>
+                    <div class="price">₹4999</div>
+                    <button class="add-to-cart-btn" data-item="Chesterfield Coat - ₹4999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/3a/a5/3aa5078e4332b641db618e53a5c550c2a7136b73.jpg?imwidth=384" alt="Raincoat">
+                    <h3>Raincoat</h3>
+                    <p>A waterproof raincoat to keep you dry.</p>
+                    <div class="price">₹2499</div>
+                    <button class="add-to-cart-btn" data-item="Raincoat - ₹2499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/69/b8/69b85cf031a4eb4538cbd685cb4ee155df1a9ebd.jpg?imwidth=384" alt="Fleece Jacket">
+                    <h3>Fleece Jacket</h3>
+                    <p>A soft fleece jacket for ultimate comfort.</p>
+                    <div class="price">₹1999</div>
+                    <button class="add-to-cart-btn" data-item="Fleece Jacket - ₹1999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/8f/da/8fda8c716669816d2957267bf6322d377dba32d1.jpg?imwidth=384" alt="Sporty Windbreaker">
+                    <h3>Sporty Windbreaker</h3>
+                    <p>A lightweight windbreaker for active days.</p>
+                    <div class="price">₹2499</div>
+                    <button class="add-to-cart-btn" data-item="Sporty Windbreaker - ₹2499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/27/0e/270e9fd552488f72c682439f2a0088e5140aa6f4.jpg?imwidth=384" alt="Faux Leather Coat">
+                    <h3>Faux Leather Coat</h3>
+                    <p>A chic faux leather coat for a modern edge.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Faux Leather Coat - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/bc/98/bc987bf38a4a5e89f8a9057f3d4e1a066042eec4.jpg?imwidth=384" alt="Cropped Jacket">
+                    <h3>Cropped Jacket</h3>
+                    <p>A trendy cropped jacket for a stylish silhouette.</p>
+                    <div class="price">₹2999</div>
+                    <button class="add-to-cart-btn" data-item="Cropped Jacket - ₹2999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/3f/92/3f92bf445f3bc6d699bae67b0b944aadbc7ccebb.jpg?imwidth=384" alt="Bamboo Coat">
+                    <h3>Bamboo Coat</h3>
+                    <p>An eco-friendly bamboo coat for sustainable fashion.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Bamboo Coat - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/78/7a/787a71abfe2d2684ccc3229ac1c01c8941e66599.jpg?imwidth=384" alt="Teddy Coat">
+                    <h3>Teddy Coat</h3>
+                    <p>A cozy teddy coat for a warm and fuzzy feel.</p>
+                    <div class="price">₹4499</div>
+                    <button class="add-to-cart-btn" data-item="Teddy Coat - ₹4499">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/de/e3/dee326ec90556c7fb8acf002ed9e25305e887c9c.jpg?imwidth=384" alt="Bamboo Parka">
+                    <h3>Bamboo Parka</h3>
+                    <p>A stylish bamboo parka for eco-conscious individuals.</p>
+                    <div class="price">₹4999</div>
+                    <button class="add-to-cart-btn" data-item="Bamboo Parka - ₹4999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/51/e8/51e85729c0069fa37bea38605598c9a3f34d583a.jpg?imwidth=384" alt="Classic Car Coat">
+                    <h3>Classic Car Coat</h3>
+                    <p>A classic car coat for a vintage-inspired look.</p>
+                    <div class="price">₹3999</div>
+                    <button class="add-to-cart-btn" data-item="Classic Car Coat - ₹3999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/84/f7/84f726f6065a7c507febfe115349c3e87dda1ed2.jpg?imwidth=384" alt="Utility Jacket">
+                    <h3>Utility Jacket</h3>
+                    <p>A practical utility jacket with multiple pockets.</p>
+                    <div class="price">₹2999</div>
+                    <button class="add-to-cart-btn" data-item="Utility Jacket - ₹2999">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-box">
+                    <img src="https://image.hm.com/assets/hm/38/49/3849abcef6c50ff9923e10da15c2c163e13bd34b.jpg?imwidth=384" alt="Classic Overcoat">
+                    <h3>Classic Overcoat</h3>
+                    <p>A timeless overcoat that never goes out of style.</p>
+                    <div class="price">₹4999</div>
+                    <button class="add-to-cart-btn" data-item="Classic Overcoat - ₹4999">Add to Cart</button>
+                </div>
+            </div>
+           
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        document.querySelectorAll(".add-to-cart-btn").forEach((button, index) => {
+            button.addEventListener("click", function () {
+                let productBox = button.closest(".product-box");
+                let productName = productBox.querySelector("h3").textContent;
+                let productPrice = productBox.querySelector(".price").textContent;
+                let productImage = productBox.querySelector("img").src;
+
+                let product = { name: productName, price: productPrice, image: productImage };
+                cart.push(product);
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                // Redirect to cart page
+                window.location.href = "cart.html";
+            });
+        });
+    });
+</script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
